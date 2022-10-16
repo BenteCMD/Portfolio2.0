@@ -19,4 +19,28 @@ document.onmousemove = function(eye){
 
 
 
+var ctaBtn = document.querySelector("#cta-btn")
+var firstSection = document.querySelector("main")
+var frontPage = document.querySelector("header")
 
+function openPortfolio() { 
+  firstSection.scrollIntoView({behavior: 'smooth'})
+}
+
+ctaBtn.addEventListener("click", openPortfolio)
+
+
+var scrollTrigger1 = 80
+
+function scrollOvergang() {
+
+if (window.scrollY >= scrollTrigger1 || window.pageYOffset >= scrollTrigger1) {
+  frontPage.classList.add("be-gone")
+
+} else {
+  frontPage.classList.remove("be-gone")
+}
+
+}
+
+window.addEventListener("scroll", scrollOvergang)

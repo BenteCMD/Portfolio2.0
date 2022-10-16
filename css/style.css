@@ -69,20 +69,23 @@
 body {
     font-family: var(--main-font);
     color: var(--main-color2);
+    background-color: #DFE7F4;
+}
+
+img {
+    max-width: 100%;
 }
 
 button {
     cursor: pointer;
-    background-color: white;
+    background-color: transparent;
     border-radius: 50px;
     width: fit-content;
     height: fit-content;
-    border: none;
-    padding: 1.4em;
+    padding: 1.2em;
     text-transform: uppercase;
     font-family: var(--kopjes-font);
-    color: var(--main-color2);
-    box-shadow: 2px 2px 2px var(--main-color2);
+    /* box-shadow: 2px 2px 2px var(--main-color2); */
 }
 
 /********************/
@@ -129,6 +132,11 @@ header nav li a:focus-visible {
 
 header nav li a:focus {
     outline: none;
+}
+
+.be-gone {
+   transform: translateY(-100px);
+   transition: .5s;
 }
 
 li.nav-animation .underline {
@@ -199,20 +207,138 @@ h1 {
    top: 76%;
    left: 50%;
    transform: translateX(-50%);
-   transition: .7s;
+   transition: 1.5s ease;
+   /* filter: url(#liquid); */
+   border: 3px solid #DFE7F4;
+   color: white;
+   background-image: url("../images/ripple.svg");
+   background-repeat: repeat-x;
+   background-position: 0 9000%;
+   animation: opvallen 1.3s ease;
+   animation-iteration-count: 1;
 }
 
+@keyframes opvallen {
+    0% {
+        font-size: .85rem;
+    }
+
+    50% {
+        font-size: 1.1rem;
+    }
+
+    100% {
+        font-size: .85rem;
+    }
+}
+
+
 #cta-btn:hover,
-#cta-btn:focus-visible {
-    background-color: black;
-    color: white;
+#cta-btn:focus-visible { 
+    background-position: bottom;
+    color: var(--main-color);
+    transition: 1.5s ease;
+}
+
+#cta-btn:active {
+    background-color: #DFE7F4;
+    transition: .1s;
+    font-size: .8rem;
+}
+
+/* svg {
+    display: none;
+} */
+/* 
+#cta-btn:hover,
+#cta-btn:focus-visible { */
+    /* background-color: black; */
+    /* color: white;
     transition: .7s;
     font-size: 1.05rem;
-}
+} */
 
 #cta-btn:focus {
     outline: none;
 }
+/* 
+#cta-btn span {
+    display: block;
+    width: 15px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: white;
+    transition: .7s;
+}
+
+#cta-btn:hover span {
+    height: 120%;
+    transition: .4s;
+}
+
+#cta-btn:hover span:nth-of-type(1) {
+    transition-delay: .25s;
+    left: 0;
+}
+
+#cta-btn:hover span:nth-of-type(2) {
+    transition-delay: .2s;
+    left: 15px;
+}
+
+#cta-btn:hover span:nth-of-type(3) {
+    transition-delay: .15s;
+    left: 30px;
+}
+
+#cta-btn:hover span:nth-of-type(4) {
+    transition-delay: .1s;
+    left: 45px;
+}
+
+#cta-btn:hover span:nth-of-type(5) {
+    transition-delay: .05s;
+    left: 60px;
+}
+
+#cta-btn:hover span:nth-of-type(6) {
+    transition-delay: .0s;
+    left: 75px;
+}
+
+#cta-btn:hover span:nth-of-type(7) {
+    transition-delay: .05s;
+    left: 90px;
+}
+
+#cta-btn:hover span:nth-of-type(8) {
+    transition-delay: .1s;
+    left: 105px;
+}
+
+#cta-btn:hover span:nth-of-type(9) {
+    transition-delay: .15s;
+    left: 120px;
+}
+
+#cta-btn:hover span:nth-of-type(10) {
+    transition-delay: .2s;
+    left: 135px;
+}
+
+#cta-btn:hover span:nth-of-type(11) {
+    transition-delay: .25s;
+    left: 150px;
+}
+
+#cta-btn span p {
+    color: var(--main-color);
+    position: relative;
+    z-index: 5;
+} */
+
 
 #clouds { 
     position: absolute;
@@ -410,6 +536,15 @@ h1 {
 }
 
 
+/**************/
+/*   About   */
+/*************/
 
+section {
+    min-height: 100vh;
+}
 
-
+#ik {
+    width: 40em;
+    filter: grayscale(100%);
+}
