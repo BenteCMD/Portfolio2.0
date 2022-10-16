@@ -116,11 +116,19 @@ header nav li a {
     display: inline-block;
 }
 
-header nav li a:hover {
+header nav li a:hover,
+header nav li a:focus-visible {
    /* color: #7a9a6a; */
    transform: scale(120%);
-   /* transform-origin: right; */
    transition: .3s;
+}
+
+header nav li a:focus-visible {
+    border-bottom: .12em solid var(--main-color2);
+}
+
+header nav li a:focus {
+    outline: none;
 }
 
 li.nav-animation .underline {
@@ -194,11 +202,16 @@ h1 {
    transition: .7s;
 }
 
-#cta-btn:hover {
+#cta-btn:hover,
+#cta-btn:focus-visible {
     background-color: black;
     color: white;
     transition: .7s;
     font-size: 1.05rem;
+}
+
+#cta-btn:focus {
+    outline: none;
 }
 
 #clouds { 
