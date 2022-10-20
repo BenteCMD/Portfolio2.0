@@ -108,6 +108,10 @@ header nav ul {
     gap: 3em;
     padding-right: 3.2em;
     padding-top: 1.8em;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
 }
 
 header nav li a {
@@ -215,7 +219,7 @@ h1 {
    background-repeat: repeat-x;
    background-position: 0 9000%;
    animation: opvallen 1.3s ease;
-   animation-iteration-count: 1;
+   animation-iteration-count: 2;
 }
 
 @keyframes opvallen {
@@ -517,9 +521,6 @@ h1 {
     height: 3.3em;
     background: radial-gradient(black 40%, #7a9a6a 30%);
     position: absolute;
-    /* top: 0%;
-    left: 0%; */
-    /* transform: translate(-50% -50%); */
     border-radius: 50%;
     overflow: hidden;
 }
@@ -542,9 +543,31 @@ h1 {
 
 section {
     min-height: 100vh;
+    padding: 2em;
+    padding-left: 3.2em;
+}
+
+#about-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10em;
+    padding-top: 8em;
+}
+
+#h2-p-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#about-section p {
+    max-width: 22em;
+    line-height: 1.5em;
 }
 
 #ik {
-    width: 40em;
+    width: 630px;
+    height: 445px;
     filter: grayscale(100%);
+    order: -1;
 }

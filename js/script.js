@@ -21,7 +21,7 @@ document.onmousemove = function(eye){
 
 var ctaBtn = document.querySelector("#cta-btn")
 var firstSection = document.querySelector("main")
-var frontPage = document.querySelector("header")
+var frontPage = document.querySelector("#header-wrapper")
 
 function openPortfolio() { 
   firstSection.scrollIntoView({behavior: 'smooth'})
