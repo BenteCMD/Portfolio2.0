@@ -9,8 +9,8 @@
 </head>
 
 <body>
+    <div id="bg"></div>
     <header>
-        <div id="header-wrapper"</div>
         <h1>Portfolio</h1>
 
          <div class="eyes">
@@ -87,18 +87,17 @@
         </svg> -->
         
         <img id="clouds" aria-hidden="true" src="images/clouds.svg" alt="clouds">
-        <img id="moi" aria-hidden="true" src="images/moi.svg" alt="illustration of me">
-    </div>
+        <img id="moi" aria-hidden="true" src="images/mememe.svg" alt="illustration of me">
 
         <nav>
             <ul>
-                <li class="nav-animation"><a href="about.html">Over mij</a>
+                <li class="nav-animation"><a href="#about-section">Over mij</a>
                     <div class="underline"></div>
                 </li>
-                <li class="nav-animation"><a href="projects.html">Projecten</a>
+                <li class="nav-animation"><a id="projecten-a" href="#projecten-section">Projecten</a>
                     <div class="underline"></div>
                 </li>
-                <li class="nav-animation"><a href="contact.html">Contact</a>
+                <li class="nav-animation"><a id="contact-a" href="#contact-section">Contact</a>
                     <div class="underline"></div>
                 </li>
 
@@ -108,26 +107,49 @@
 
     </header>
     <main>
+    <div id="scroll-container">
         <section id="about-section">
-            <div id="h2-p-wrapper">
-                <h2>Over mij</h2>
-                <p>Hoi ik ben Bente, 22 jaar oud 
-                    en ik zit nu in mijn 2e jaar 
-                    <b>Communication and
-                    Multimedia Design</b> aan 
-                    de HvA.</p>
+            <div id="about-flex">
+                <h2>Hoi, ik ben</h2>
+                <h2 id="naam">Bente van der Zeijden</h2>
+                <h3>Junior UX Designer</h3>
+
+                <p>2e jaars <b>Communication and Multimedia Design</b> student met een brede interesse voor design.</p>
+            
+                <div id="btn-flex">
+                    <button>Contact</button>
+                    <button>Bekijk projecten</button>
+                </div>
             </div>
-            <img id="ik" src="images/IMG-20211012-WA0014.jpg" alt="picture of me">
-
+       
+            <img id="ik" src="images/ik-crop2.jpg" alt="picture of me">
         </section>
-        <section id="projects-section">
+
+        <article id="skills">
+            <h3>Skills</h3>
+            <ul>
+                <li>
+                    <div class="skill-titel"> <h4>UX Design</h4> <img src="images/Vectorpen.svg" alt="User Experience design icoon"></div>
+                    <p>Ik gebruik </span class="bolder">Figma></span> om prototypes te ontwerpen</p>
+                </li>
+                <li>
+                    <div class="skill-titel"> <h4>Visual Design</h4> <img src="images/visualicon.svg" alt="visual design icoon"></div>
+                    <p>Ik ben een visueler denker, ik maak mijn ideeën graag visueel. Ik beheers <span class="bolder">Adobe Illustrator</span> vrij goed. Het is mijn go-to tool voor vormgeving van bijv. iconen, buttons, maar ook posters. Daarnaast vind ik het leuk om vector <a href="illustraties"></a> te maken</p>
+                </li>
+                <li>
+                    <div class="skill-titel"> <h4>Coderen</h4><img src="images/code-icon.svg" alt="coderen icoon"></div>
+                    <p>Ik kan vrij goed met <span class="bolder">HTML</span> en <span class="bolder">CSS</span> over weg, van <span class="bolder">Javascript</span> heb ik een basiskennis. Ik heb mijn website ook zelf gecodeerd. Ik vind het leuk om sites interactief te maken.</p>
+                </li>
+            </ul>
+        </article>
+
+        <section id="projecten">
             <h2>Projecten</h2>
-        </section>
-        <section id="contact-section">
-            <h2>Contact</h2>
-        </section>
+            <article>
+            </article>
+        </section>  
+    </div>
     </main>
-
     <script defer src="js/script.js"></script>
 </body>
 

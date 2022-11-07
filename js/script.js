@@ -19,28 +19,85 @@ document.onmousemove = function(eye){
 
 
 
+
+var body = document.querySelector("body")
 var ctaBtn = document.querySelector("#cta-btn")
-var firstSection = document.querySelector("main")
-var frontPage = document.querySelector("#header-wrapper")
+var logo = document.querySelector("#logo")
+var bg = document.querySelector("#bg")
+var eyes = document.querySelector(".eyes")
+var h2 = document.querySelector("#h2-wrapper")
+var ik = document.querySelector("#moi")
+var clouds = document.querySelector("#clouds")
+var aboutSection = document.querySelector("main")
 
 function openPortfolio() { 
-  firstSection.scrollIntoView({behavior: 'smooth'})
+  bg.classList.add("zoom-in")
+  ctaBtn.style.display="none"
+  eyes.style.display="none"
+  h2.style.display="none"
+  ik.style.display="none"
+  clouds.style.display="none"
+  aboutSection.classList.add("verschijnen")
 }
 
 ctaBtn.addEventListener("click", openPortfolio)
 
-
-var scrollTrigger1 = 80
-
-function scrollOvergang() {
-
-if (window.scrollY >= scrollTrigger1 || window.pageYOffset >= scrollTrigger1) {
-  frontPage.classList.add("be-gone")
-
-} else {
-  frontPage.classList.remove("be-gone")
+function backTolanding() {
+  bg.classList.remove("zoom-in")
+  ctaBtn.style.display="block"
+  eyes.style.display="block"
+  h2.style.display="block"
+  ik.style.display="block"
+  clouds.style.display="block"
+  aboutSection.classList.remove("verschijnen")
 }
 
+logo.addEventListener("click", backTolanding)
+
+
+
+
+var a = document.querySelectorAll("header nav ul li a")
+var a1 = document.querySelector("header nav ul li a:first-of-type")
+var a2 = document.querySelector("#projecten-a")
+var a3 = document.querySelector("#contact-a")
+
+var scrollTrigger2 = 600
+var scrollTrigger3 = 1200
+var scrollTrigger4 = 1800
+
+function veranderClr() {  
+  if (window.scrollY < scrollTrigger2) {
+
+    for(var i=0;i<3;i++) {
+      a[i].style.color="#4D4D4D"
+    
+    }
+  }
+
+  if (window.scrollY >= scrollTrigger2) {
+    a2.style.color="#4D4D4D"
+  
+    a1.style.color="#648056"
+    a1.style.fontWeight="600"
+   
+  }
+
+  if (window.scrollY >= scrollTrigger3) {
+    a1.style.color="#4D4D4D"
+   
+    a3.style.color="#4D4D4D"
+   
+    a2.style.color="#648056"
+    
+  }
+
+  if (window.scrollY >= scrollTrigger4) {
+    a2.style.color="#4D4D4D"
+    
+    a3.style.color="#648056"
+    
+  }
 }
 
-window.addEventListener("scroll", scrollOvergang)
+window.addEventListener("scroll", veranderClr)
