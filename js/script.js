@@ -31,6 +31,7 @@ var clouds = document.querySelector("#clouds")
 var aboutSection = document.querySelector("main")
 
 function openPortfolio() { 
+  // bg.style.transform = "translateY(150px)"
   bg.classList.add("zoom-in")
   ctaBtn.style.display="none"
   eyes.style.display="none"
@@ -43,6 +44,7 @@ function openPortfolio() {
 ctaBtn.addEventListener("click", openPortfolio)
 
 function backTolanding() {
+  // bg.style.transform = "translateY(0px)"
   bg.classList.remove("zoom-in")
   ctaBtn.style.display="block"
   eyes.style.display="block"
