@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bente van der Zeijden - Projecten</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div id="bg2"></div>
+       
+        <button id="dark-mode-toggle">
+            <span id="toggle"></span>
+            <img id="sun" src="images/sun.svg" alt="zon icoon">
+            <img id="sunset" src="images/sunset.svg" alt="zonsondergang icoon">
+        </button>
+
+        <button id="hamburger" aria-hidden="true">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+
+        <h1>Portfolio</h1>
+
+        <a href="index.html"><svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.59 50.72">
+                <defs>
+                    <style>
+                        .cls-1 {
+                            fill: var(--main-color2);
+                        }
+
+                        .cls-2 {
+                            fill: none;
+                            stroke: var(--main-color2);
+                            stroke-miterlimit: 10;
+                            stroke-width: 3.37px;
+                        }
+                    </style>
+                </defs>
+                <g id="text">
+                    <g>
+                        <path class="cls-2" d="M6.09,7.95c.13,1,.23,2.14,.26,3.45,.34,11.78-3.8,32.36-4.71,36.79" />
+                        <path class="cls-1"
+                            d="M.3,.09c4.5-.8,6.78,3.95,7.46,7.63,0,0-3.34,.45-3.34,.45C4.3,5.38,3.78,1.71,.4,1.67c0,0-.1-1.58-.1-1.58H.3Z" />
+                        <path class="cls-2"
+                            d="M13.91,49.04c.73-.04,1.45-.13,2.16-.27,6.75-1.36,11.84-7.33,11.84-14.49,0-8.16-6.62-14.78-14.78-14.78-2.67,0-5.17,.71-7.33,1.94" />
+                        <path class="cls-1"
+                            d="M15.26,38.17c-3-.85-6.32,1.61-6.23,4.69-.1,2.84,2.78,5.17,5.46,4.43,0,0,.61,3.31,.61,3.31-2.27,.35-4.64-.41-6.23-1.96-3.34-3-2.83-8.84,.97-11.12,1.76-1.11,3.95-1.36,5.86-.66l-.44,1.32h0Z" />
+                        <path class="cls-1"
+                            d="M10.53,5.15c-1.68,.28-2.95,1.74-2.84,3.39,0,0-3.33-.47-3.33-.47,.61-2.75,3.4-4.85,6.16-4.49,0,0,.01,1.57,.01,1.57h0Z" />
+                    </g>
+                </g>
+            </svg></a>
+
+        <nav>
+            <ul>
+                <li class="nav-animation"><a id="about-a" href="aboutme.html">Over mij</a>
+                    <div class="underline"></div>
+                </li>
+                <li class="nav-animation"><a id="projecten-a" href="projecten.html">Projecten</a>
+                    <div class="underline"></div>
+                </li>
+                <li class="nav-animation"><a class="bolder" id="contact-a" href="contact.html">Contact</a>
+                    <div class="underline"></div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="main-contact">
+        <div id="contact-h2">
+            <h2>Contact</h2>
+
+            <svg width="33" height="35" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="16" height="12" rx="2" stroke="var(--section-p)" stroke-width="2" />
+                <path d="M1 4L8.10557 7.55279C8.66863 7.83431 9.33137 7.83431 9.89443 7.55279L17 4"
+                    stroke="var(--section-p)" stroke-width="2" />
+            </svg>
+
+
+        </div>
+
+        <p>Momenteel ben ik op zoek naar een leuke stageplek!</p>
+
+        <form>
+            <input type="text" value="Bentezzz@gmail.com" id="myInput">
+            <button id="btn-txt" onclick="copyEmail()">Copy e-mail</button>
+        </form>
+
+        <a id="cv-link" href="files/CV 2022 ux_compressed.pdf" download>
+            Download CV (.. kb)
+            <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 5L8 10M8 10L13 5M8 10L8 1" stroke="var(--section-h2)" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M1 12L1 13C1 14.1046 1.89543 15 3 15L13 15C14.1046 15 15 14.1046 15 13V12" stroke="var(--section-h2)"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+        </a>
+
+    </div>
+    <script defer src="js/script.js"></script>
+    <script defer src="js/script-contact.js"></script>
+    <script defer src="js/darkmode.js"></script>
+</body>
+
+</html>
