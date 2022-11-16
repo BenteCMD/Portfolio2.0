@@ -171,7 +171,7 @@ var sunset = document.querySelector("#sunset")
 
 const enableDarkMode = () => {
     document.documentElement.classList.add("dark-mode")
-    skillsCirkel.src="images/skills-dark.svg"
+    skillsCirkel.src="images/skills-dark.png"
     visualPart.src="images/visualpart-dark.svg"
     codePart.src="images/code-dark.svg"
     uxPart.src="images/ux-dark.svg"

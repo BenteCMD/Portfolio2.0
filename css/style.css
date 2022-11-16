@@ -70,7 +70,7 @@
     --ctabtn-clr: rgba(255, 255, 255, 0.3);
     --btn-bg: rgba(47, 47, 47, 0.8);
     --home-h2: rgba(255, 255, 255, 0.6);
-    --section-h2: #ed686d;
+    --section-h2: #93b7a5;
     --section-clr: rgba(0, 0, 0, 0.8);
     --section-p: white;
     --box-shadow: black;
@@ -336,6 +336,13 @@ header button.open .line:nth-child(3) {
     position: absolute;
     top: 1.5em;
     left: 8em;
+}
+
+@media (max-width: 500px) {
+    #dark-mode-toggle {
+        display: none;
+        z-index: 14;
+    }
 }
 
 #toggle {
@@ -674,7 +681,7 @@ h1 {
 
     .eye:first-child {
         top: 5em;
-        left: 13em;
+        left: 9.5em;
     }
 }
 
@@ -686,7 +693,6 @@ main {
     display: none;
     transition: 1s;
     position: absolute;
-
     top: 5em;
     left: 0;
     bottom: 0;
@@ -694,7 +700,13 @@ main {
 }
 
 #main-about {
-    margin-top: 7em;
+    margin-top: 5em;
+    overflow-y: scroll;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .verschijnen {
@@ -723,7 +735,6 @@ main {
     gap: 3em;
     justify-content: center;
     transition: .3s ease;
-  
 }
 
 .wider {
@@ -739,6 +750,7 @@ main {
 
 #about-section p {
     min-width: 15em;
+    max-width: 22em;
     line-height: 1.5em;
     font-size: 1.2rem;
     margin-top: 1em;
@@ -847,6 +859,14 @@ main {
     gap: 1em;
 }
 
+#info-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
 #back {
     border: none;
     background: none;
@@ -889,6 +909,50 @@ main {
     100% {
         opacity: 0%;
         z-index: 0;
+    }
+}
+
+
+@media (max-width: 1300px) {
+    #about-section {
+        width: 65%;
+    }
+}
+
+@media (max-width: 1200px) {
+    #about-section {
+        flex-direction: column;
+        width: 60%;
+        gap: 1em;
+    }
+
+    #about-h2 {
+        display: flex;
+        gap: 1em;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1100px) {
+    #about-section {
+        width: 75%;
+    }
+}
+
+@media (max-width: 1000px) {
+    #about-section {
+        width: 85%;
+    }
+
+    #ik {
+        right: 0em;
+    }
+}
+
+@media (max-width: 800px) {
+    #ik {
+        right: 7em;
+        top: 40em;
     }
 }
 
