@@ -12,7 +12,7 @@
 
     <header>
         <div id="bg2"></div>
-       
+
         <button id="dark-mode-toggle">
             <span id="toggle"></span>
             <img id="sun" src="images/sun.svg" alt="zon icoon">
@@ -86,21 +86,22 @@
 
         <p>Momenteel ben ik op zoek naar een leuke stageplek!</p>
 
-        <form>
-            <input type="text" value="Bentezzz@gmail.com" id="myInput">
-            <button id="btn-txt" onclick="copyEmail()">Copy e-mail</button>
-        </form>
+        <div id="contact-btn-flex">
+            <form>
+                <input type="text" value="Bentezzz@gmail.com" id="myInput">
+                <button id="btn-txt" onclick="copyEmail()">Copy e-mail</button>
+            </form>
 
-        <a id="cv-link" href="files/CV 2022 ux_compressed.pdf" download>
-            Download CV (.. kb)
-            <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 5L8 10M8 10L13 5M8 10L8 1" stroke="var(--section-h2)" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                <path d="M1 12L1 13C1 14.1046 1.89543 15 3 15L13 15C14.1046 15 15 14.1046 15 13V12" stroke="var(--section-h2)"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-
-        </a>
+            <a id="cv-link" href="files/CV 2022 ux_compressed.pdf" download>
+                Download CV (.. kb)
+                <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 5L8 10M8 10L13 5M8 10L8 1" stroke="var(--section-h2)" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M1 12L1 13C1 14.1046 1.89543 15 3 15L13 15C14.1046 15 15 14.1046 15 13V12"
+                        stroke="var(--section-h2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
 
     </div>
     <script defer src="js/script.js"></script>

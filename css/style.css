@@ -54,6 +54,7 @@
     --box-shadow: #4d4d4d;
     --btn-clr: white;
     --btn-clr2: #89A575;
+    --eye-clr: #89A575;
     --bg: url(../images/bg-portfolio.svg);
     --bg2: url(../images/bg2.svg);
 
@@ -71,11 +72,12 @@
     --btn-bg: rgba(47, 47, 47, 0.8);
     --home-h2: rgba(255, 255, 255, 0.6);
     --section-h2: #93b7a5;
-    --section-clr: rgba(0, 0, 0, 0.8);
+    --section-clr: rgba(25, 25, 25, 0.8);
     --section-p: white;
     --box-shadow: black;
     --btn-clr: white;
     --btn-clr2: white;
+    --eye-clr: #5f9479;
     --bg: url(../images/bg-darkmode.svg);
     --bg2: url(../images/bg2-dark.svg);
 }
@@ -122,7 +124,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: var(--bg);
+    background-image: var(--bg2);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -393,7 +395,7 @@ h1 {
     justify-content:flex-end;
     padding: 2.5em; */
     position: absolute;
-    top: 36em;
+    top: 35em;
     left: 2.5em;
     color: var(--home-h2);
     min-width: 280px;
@@ -649,7 +651,7 @@ h1 {
 .ball {
     width: 3.3em;
     height: 3.3em;
-    background: radial-gradient(black 40%, var(--main-color3) 30%);
+    background: radial-gradient(black 40%, var(--eye-clr) 30%);
     position: absolute;
     border-radius: 50%;
     overflow: hidden;
@@ -692,15 +694,17 @@ h1 {
 main {
     display: none;
     transition: 1s;
+    margin-top: 5em;
+    overflow-y: scroll;
     position: absolute;
-    top: 5em;
+    top: 0;
     left: 0;
-    bottom: 0;
     right: 0;
+    bottom: 0;
 }
 
 #main-about {
-    margin-top: 5em;
+    margin-top: 3.5em;
     overflow-y: scroll;
     position: absolute;
     top: 0;
@@ -733,7 +737,7 @@ main {
     display: flex;
     flex-direction: row;
     gap: 3em;
-    justify-content: center;
+    
     transition: .3s ease;
 }
 
@@ -873,10 +877,10 @@ main {
     box-shadow: none;
     padding: none;
     opacity: 0%;
-    position: fixed;
+    position: absolute;
     color: var(--section-p);
-    top: 150px;
-    left: 120px;
+    top: 60px;
+    left: 110px;
 }
 
 #visual-info,
@@ -917,6 +921,10 @@ main {
     #about-section {
         width: 65%;
     }
+
+    #about-flex {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -951,14 +959,65 @@ main {
 
 @media (max-width: 800px) {
     #ik {
-        right: 7em;
-        top: 40em;
+        right: 0em;
+        top: 16em;
+        transform: scale(.65);
     }
 }
 
+@media (max-width: 710px) {
+    #ik {
+        right: 0em;
+        top: 42em;
+        transform: scale(.65);
+    }
+}
 
+@media (max-width: 650px) {
+    #ik {
+        display: none;
+    }
+}
 
+@media (max-width: 620px) {
+    #about-h2 {
+       flex-direction: column;
+       align-items: flex-start;
+       font-size: 1rem;
+       min-width: 0;
+    }
 
+    #about-content {
+        transform: scale(.9);
+    }
+
+    #back {
+        left: 60px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    #btn-flex {
+        flex-direction: column;
+    }
+
+    #about-section a {
+        min-width: 200px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    #about-content {
+        min-width: 180px;
+        margin-left: -3em;
+    }
+
+    #skills-diagram {
+        transform: scale(1.3);
+    }
+}
 
 /*************/
 /* Projecten */
@@ -973,7 +1032,7 @@ main {
     bottom: 0;
 
     background-color: var(--section-clr);
-    width: 80%;
+    width: calc(100% - 100px);
     margin-inline: auto;
     border-top-left-radius: 2em;
     border-top-right-radius: 2em;
@@ -1121,6 +1180,10 @@ main {
     padding-top: 2em;
     padding-bottom: 3em;
     margin-top: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #contact-h2 {
@@ -1175,4 +1238,62 @@ form button {
 
 #main-contact img {
     width: 30px;
+}
+
+@media(max-width: 1350px) {
+    #main-contact {
+        width: 47%;
+    }
+}
+
+@media(max-width: 1250px) {
+    #main-contact {
+        width: 52%;
+    }
+}
+
+@media(max-width: 1050px) {
+    #main-contact {
+        width: 57%;
+    }
+}
+
+@media(max-width: 950px) {
+    #main-contact {
+        width: 67%;
+    }
+}
+
+@media(max-width: 810px) {
+    #main-contact {
+        width: 75%;
+    }
+}
+
+@media(max-width: 720px) {
+    #main-contact {
+        width: 82%;
+    }
+}
+
+@media(max-width: 670px) {
+    #main-contact {
+        width: 90%;
+    }
+}
+
+@media(max-width: 600px) {
+    #main-contact {
+        width: 95%;
+    }
+
+    #contact-btn-flex {
+        display: column;
+        align-items: flex-start;
+    }
+
+    #btn-txt {
+        margin-bottom: 2em;
+        margin-top: -1em;
+    }
 }

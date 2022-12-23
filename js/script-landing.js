@@ -76,7 +76,7 @@ function backTolanding() {
   setTimeout(() => {
     clouds.style.display="block"
       }, 1350)
-  aboutSection.classList.remove("verschijnen")
+  aboutSection.style.display="none"
   // fotoIk.classList.remove("ik-animation")
   codingInfo.classList.remove("coding-info-animation")
   visualInfo.classList.remove("visual-info-animation")
@@ -172,7 +172,7 @@ var sunset = document.querySelector("#sunset")
 const enableDarkMode = () => {
     document.documentElement.classList.add("dark-mode")
     skillsCirkel.src="images/skills-dark.png"
-    visualPart.src="images/visualpart-dark.svg"
+    visualPart.src="images/visual-dark.svg"
     codePart.src="images/code-dark.svg"
     uxPart.src="images/ux-dark.svg"
 
