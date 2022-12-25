@@ -1030,7 +1030,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-
+/*
     background-color: var(--section-clr);
     width: calc(100% - 100px);
     margin-inline: auto;
@@ -1039,26 +1039,37 @@ main {
     box-shadow: 3px 3px 5px var(--box-shadow);
     padding-top: 2em;
     padding-bottom: 4em;
+*/
     margin-top: 5.3em;
     transition: .2s;
 }
 
 #project-section h2 {
-    text-align: center;
-    color: var(--section-h2);
+    color: var(--main-color2);
+    font-size: 2rem;
+    position: absolute;
+    right: 100px;
+    top: 80px;
+    z-index: 15;
+}
+
+#titel-wolk {
+    position: absolute;
+    right: 0;
+    width: 23em;
+    height: 13em;
 }
 
 #project-section ul {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1em; */
     list-style: none;
-    gap: 1em;
-  
     margin-top: 1em;
     margin-bottom: 3em;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
     animation: omhoog 1.5s ease;
 }
 
@@ -1078,17 +1089,19 @@ main {
 }
 
 #img-container {
-    max-height: 20em; 
-    max-width: 20em; 
-
+    width: 20em;
+    height: 20em;
+    background-color: white;
     overflow: hidden;
     box-shadow: 3px 3px 5px var(--box-shadow);
     border-radius: 20px;
+    /* max-width: 100%;
+    height: auto; */
 }
 
 #img-container2 {
     max-height: 20em; 
-    max-width: 38em;  
+    width: 38em;  
     background-color: white;
     overflow: hidden;
     box-shadow: 3px 3px 5px var(--box-shadow);
@@ -1102,6 +1115,17 @@ main {
 
 #project-section li img:hover {
     transform: scale(1.1);
+}
+
+.project-cloud {
+    position: absolute;
+    width: 25em;
+    height: 15em;
+}
+
+#rmdd {
+    top: 17em;
+    left: 10em;
 }
 
 /* 
@@ -1133,6 +1157,13 @@ main {
         width: 41em;
     }
 } */
+
+
+@media(max-width: 770px) {
+    #project-section {
+        width: 90%;
+    }
+}
 
 
 
