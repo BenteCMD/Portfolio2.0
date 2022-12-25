@@ -724,6 +724,7 @@ main {
     background-color: var(--section-clr);
     width: 60%;
     min-height: 400px;
+    max-height: 800px;
     height: fit-content;
     margin-inline: auto;
     border-radius: 2em;
@@ -995,7 +996,6 @@ main {
     #back {
         left: 60px;
     }
-
 }
 
 @media (max-width: 500px) {
@@ -1006,6 +1006,10 @@ main {
     #about-section a {
         min-width: 200px;
         text-align: center;
+    }
+
+    #about-section {
+        padding-top: .5em;
     }
 }
 
@@ -1051,7 +1055,7 @@ main {
     position: absolute;
     right: 100px;
     top: 12.5em;
-    z-index: 15;
+    z-index: 10;
 }
 
 #titel-wolk {
