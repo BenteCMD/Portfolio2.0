@@ -53,11 +53,11 @@ function openPortfolio() {
   codingInfo.classList.add("coding-info-animation")
   visualInfo.classList.add("visual-info-animation")
   uxInfo.classList.add("ux-info-animation")
-  // fotoIk.classList.add("ik-animation")
 }
 
 ctaBtn.addEventListener("click", openPortfolio)
 navAbout.addEventListener("click", openPortfolio)
+window.addEventListener("scroll", openPortfolio)
 
 function backTolanding() {
   bg.classList.remove("zoom-in")

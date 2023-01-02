@@ -9,9 +9,8 @@
 </head>
 
 <body>
-
-    <header>
-        <div id="bg2"></div>
+    <div id="bg2"></div>
+    <header id="header">
 
         <button id="dark-mode-toggle">
             <span id="toggle"></span>
@@ -73,7 +72,7 @@
         </nav>
     </header>
 
-    <div id="main-about">
+    <main id="main-about">
         <section id="about-section">
             <div id="about-flex">
                 <div id="about-content">
@@ -86,13 +85,22 @@
                 <p>2e jaars <b>Communication and Multimedia Design</b> student met een brede interesse voor design.</p>
             
                 <div id="btn-flex">
-                    <a href="contact.html">Contact</a>
-                    <a href="projecten.html">Bekijk projecten</a>
+                        <a id="contact-btn" href="contact.html">
+                            <svg width="28" height="33" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1" y="1" width="15.5" height="10" rx="2" stroke="white" stroke-width="2" />
+                                <path d="M1 4L8.10557 7.55279C8.66863 7.83431 9.33137 7.83431 9.89443 7.55279L17 4"
+                                    stroke="white" stroke-width="2" />
+                            </svg>
+                            Contact
+                        </a>
+                    <a href="projecten.html">Projecten</a>
                 </div>
                 </div>
             </div>
             
-            <img id="skills-diagram" src="images/skills.svg" alt="vaardigheden cirkeldiagram">
+            <!-- <img id="leesmeer" src="images/leesmeer.svg" alt="lees meer"> -->
+            <img tabindex="1" id="skills-diagram" src="images/skills.svg" alt="vaardigheden cirkeldiagram">
+        
             <img id="ik" src="images/ikk.png" alt="foto van mij">
 
             <div id="skills-section">
@@ -105,9 +113,8 @@
                     <img id="coding-info-dark" src="images/code-dark.svg" alt="coding skill info">
                     <img id="ux-info-dark" src="images/ux-dark.svg" alt="ux skill info">
                 </div>
-            </div>
-
         </section>
+    </main>
     <script defer src="js/script.js"></script>
     <script defer src="js/script-about.js"></script>
 </body>
