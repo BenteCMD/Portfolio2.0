@@ -100,7 +100,6 @@ body {
     font-family: var(--main-font);
     color: var(--section-p);
     overflow-x: hidden;
-    overflow-y: hidden;
     min-height: 100vh;
 }
 
@@ -116,10 +115,11 @@ body {
     background-position: center;
     transition: 2s;
     z-index: -1;
+    max-height: 100vh;
 }
 
 #bg2 {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
@@ -133,7 +133,20 @@ body {
 }
 
 .background-header {
-    background-color: white;
+    background-color: #E0E7F3;
+    transition: .3s;
+}
+
+.background-header-project {
+    background-color: var(--main-color);
+    transition: .3s;
+}
+
+header {
+    width: 100vw;
+    height: 85px;
+    z-index: 15;
+    position: relative;
 }
 
 .zoom-in {
@@ -172,6 +185,14 @@ button {
     color:var(--main-color3);
 }
 
+.bolder2 {
+    font-family: "Satoshi Bold", "Futura", "sans-serif";
+}
+
+header {
+    position: fixed;
+    top: 0;
+}
 
 
 /********************/
@@ -323,6 +344,7 @@ header button.open .line:nth-child(3) {
     border: 4px solid transparent;
     background-color: rgb(255, 255, 255, 0);
     border-radius: 50px;
+    z-index: 12;
 }
 
 #logo:hover {
@@ -691,26 +713,8 @@ h1 {
 /*   About   */
 /*************/
 
-main {
-    display: none;
-    transition: 1s;
-    margin-top: 5em;
-    overflow-y: scroll;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
 #main-about {
-    margin-top: 3.5em;
-    overflow-y: scroll;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    margin-top: 5.5em;
 }
 
 .verschijnen {
@@ -724,7 +728,7 @@ main {
     background-color: var(--section-clr);
     width: 60%;
     min-height: 400px;
-    max-height: 800px;
+    /* max-height: 800px; */
     height: fit-content;
     margin-inline: auto;
     border-radius: 2em;
@@ -733,13 +737,18 @@ main {
     padding-right: 5em;
     padding-top: 3em;
     padding-bottom: 3em;
-    margin-top: 2em;
+    margin-top: 3em;
 
     display: flex;
     flex-direction: row;
     gap: 3em;
-    
+
+}
+
+#hide {
+    display: none;
     transition: .3s ease;
+    margin-top: 7em;
 }
 
 .wider {
@@ -776,10 +785,18 @@ main {
 
 #btn-flex {
     display: flex;
-    gap: 2em;
+    gap: 1.5em;
     margin-top: 3em;
     margin-bottom: 1em;
     align-items: center;
+}
+
+#contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    max-height: 53.5px;
 }
 
 #about-section a {
@@ -808,7 +825,7 @@ main {
 
 #about-section a:hover,
 #about-section a:focus-visible {
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: .3s;
 }
 
@@ -850,11 +867,28 @@ main {
     }
 }
 
+/* #leesmeer {
+    position: absolute; 
+    top: 48px;
+    left: 650px;
+    width: 6em;
+} */
+
 #skills-diagram {
     max-height: 320px;
     width: 320px;
     z-index: 9;
     cursor: pointer;
+    transition: .3s;
+}
+
+#skills-diagram:hover,
+#skills-diagram:focus-visible {
+    transform: scale(1.05);
+}
+
+#skills-diagram:focus {
+    outline: none;
 }
 
 #skills-section {
@@ -934,12 +968,17 @@ main {
         flex-direction: column;
         width: 60%;
         gap: 1em;
+        padding-top: 2em;
     }
 
     #about-h2 {
         display: flex;
         gap: 1em;
         align-items: center;
+    }
+
+    #btn-flex {
+        margin-top: 1.5em;
     }
 }
 
@@ -975,7 +1014,7 @@ main {
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 705px) {
     #ik {
         display: none;
     }
@@ -1004,7 +1043,7 @@ main {
     }
 
     #about-section a {
-        min-width: 200px;
+        min-width: 100%;
         text-align: center;
     }
 
@@ -1035,16 +1074,6 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-/*
-    background-color: var(--section-clr);
-    width: calc(100% - 100px);
-    margin-inline: auto;
-    border-top-left-radius: 2em;
-    border-top-right-radius: 2em;
-    box-shadow: 3px 3px 5px var(--box-shadow);
-    padding-top: 2em;
-    padding-bottom: 4em;
-*/
     margin-top: 5.3em;
     transition: .2s;
 }
@@ -1076,7 +1105,6 @@ main {
     width: 90%;
     margin-inline: left;
     margin-top: 1em;
-    /* animation: omhoog 1.5s ease; */
 }
 
 @media(max-width: 980px) {
@@ -1113,10 +1141,9 @@ main {
 }
 
 .project-cloud {
-    /* position: absolute; */
     width: 300px;
     object-fit: contain;
-    animation: upDown 4s infinite cubic-bezier(.32,.15,.84,.75);
+    animation: upDown 6s infinite cubic-bezier(.32,.15,.84,.75);
 }
 
 #project-section ul li:focus {
@@ -1129,10 +1156,24 @@ main {
 }
 
 #rmdd {
-    top: 17em;
-    left: 10em;
+    animation: upDown 6s infinite ease-in-out;
+    animation-delay: 1000ms;
 }
 
+#cc {
+    animation: upDown 6s infinite ease-in-out;
+    animation-delay: 500ms;
+}
+
+#menu {
+    animation: upDown 6s infinite ease-in-out;
+    animation-delay: 200ms;
+}
+
+#skate {
+    animation: upDown 6s infinite ease-in-out;
+    animation-delay: 1000ms;
+}
 
 
 
@@ -1140,15 +1181,64 @@ main {
 /* Case study */
 /**************/
 
+#main-casestudy {
+    background-color:rgba(255,255,255, 0.8);
+    width: calc(100% - 100px);
+    margin-inline: auto;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    box-shadow: 3px 0 3px -4px var(--box-shadow), -3px 0 3px -4px var(--box-shadow);
+    padding-top: 2em;
+    padding-bottom: 4em;
+    padding-right: 11%;
+    padding-left: 11%;
+    margin-top: 5.5em;
+    /* overflow-x: hidden; */
+    transform: .2s;
+    max-height: fit-content;
+    scroll-margin: 10em;
+}
+
+#main-casestudy2 {
+    background-color: white;
+    width: calc(100% - 100px);
+    margin-inline: auto;
+    box-shadow: 3px 0 3px -4px var(--box-shadow), -3px 0 3px -4px var(--box-shadow);
+    padding-top: 2em;
+    padding-bottom: 4em;
+    padding-right: 11%;
+    padding-left: 11%;
+    overflow-x: hidden;
+    margin-top: -16em;
+    transform: .2s;
+}
+
+#main-casestudy3 {
+    background-image: linear-gradient(white, rgba(255,255,255, 0.8) 15%);
+    width: calc(100% - 100px);
+    margin-inline: auto;
+    box-shadow: 3px 0 3px -4px var(--box-shadow), -3px 0 3px -4px var(--box-shadow);
+    padding-top: 2em;
+    padding-bottom: 4em;
+    padding-right: 11%;
+    padding-left: 11%;
+    overflow-x: hidden;
+    transform: .2s;
+}
 
 #titel-terugknop {
     display: flex;
     align-items: center;
-    gap: 3em;
+    justify-content: center;
+    gap: .5em;
 }
 
-#main-casestudy h2 {
+#main-casestudy h2,
+#main-casestudy2 h2,
+#main-casestudy3 h2 {
     font-size: 2rem;
+    margin-top: .5em;
+    min-width: 300px;
 }
 
 .terug-knop {
@@ -1157,11 +1247,246 @@ main {
     font-size: 1.2rem;
     opacity: 80%;
     color: var(--main-color2);
+    position: fixed;
+    top: 22.5%;
+    left: 7%;
+    z-index: 12;
 }
 
+#back-arrow {
+    width: 1.1em;
+    rotate: 90deg;
+    cursor: pointer;
+    transition: .1s;
+}
 
+#project-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    list-style: none;
+    gap: 1.5em;
+    border-top: 1px solid #4d4d4d;
+    border-bottom: 1px solid #4d4d4d;
+    padding: 1em;
+    margin-bottom: 2em;
+    justify-content:space-evenly;
+    scroll-margin: 120px;
+}
 
+@media (max-width: 680px) {
+    #project-info li {
+        margin-bottom: 1.5em;
+    }
 
+    #project-info li:last-of-type {
+        margin-bottom: 0em;
+    }
+
+    #project-info {
+        flex-direction: column;
+    }
+}
+
+.proj-heading {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 900;
+    opacity: 70%;
+    margin-bottom: .5em;
+}
+
+#img-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    width: 100%;
+    height: 100%;
+}
+
+.storyboard {
+    min-width: 630px;
+    flex-wrap: nowrap;
+    margin-top: 1em;
+}
+
+#arrow {
+    width: 2em;
+    margin: 2em;
+    cursor: pointer;
+    transition: .1s;
+}
+
+#arrow-container {
+    width: max-content;
+    margin-inline: auto;
+}
+
+#arrow:hover,
+#arrow:focus-visible {
+    transform: scale(1.1);
+}
+
+#arrow:focus {
+    outline: none;
+}
+
+#section-flex {
+    display: flex;
+    gap: 3em;
+    margin-top: 3em;
+}
+
+@media(max-width: 1050px ) {
+    #section-flex {
+        flex-direction: column;
+        gap: 0em;
+    }
+}
+
+#main-casestudy section,
+#main-casestudy2 section,
+#main-casestudy3 section {
+    margin-bottom: 3em;
+}
+
+#main-casestudy2 section:first-of-type {
+    margin-top: 4em;
+}
+
+#main-casestudy2 section:first-of-type h5 {
+    margin-top: 2em;
+}
+
+#main-casestudy section img {
+    width: 35em;
+}
+
+#main-casestudy2 section img {
+    width: 30em;
+}
+
+.centreren {
+    width: max-content;
+    margin-inline: auto;
+    margin-top: 1em;
+}
+
+@media(max-width: 710px) {
+    .centreren {
+        width: fit-content;
+    }
+}
+
+#user-scenario-p {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    column-gap: 3em;
+    margin-bottom: 3em;
+    margin-top: 1em;
+}
+
+#user-scenario-p p:last-of-type {
+    margin-top: -1.7em;
+}
+
+@media(max-width: 1200px) {
+    #user-scenario-p p:last-of-type {
+        margin-top: 0em;
+    }
+}
+
+#mockup-fridge {
+    width: calc(100% - 100px);
+    margin-inline: auto;
+    margin-top: 250px;
+}
+
+.omhoog {
+    transform: translateY(-250px)  !important;
+    transition: .5s;
+}
+
+.wireflow {
+    min-width: 50em;
+}
+
+@media (max-width: 1000px) {
+    .wireflow {
+        min-width: 40em;
+        transition: .5s;
+    }
+}
+
+@media (max-width: 870px) {
+    .wireflow {
+        min-width: 0em;
+        transition: .5s;
+    }
+}
+
+#main-casestudy h4,
+#main-casestudy2 h4,
+#main-casestudy3 h4  {
+    font-size: 1.7rem;
+    font-family: var(--kopjes-font-h2);
+    color: var(--main-color3);
+    margin-bottom: .5em;
+}
+
+#main-casestudy h5,
+#main-casestudy2 h5,
+#main-casestudy3 h5  {
+    font-size: 1.2rem;
+    font-family: var(--kopjes-font-h2);
+    color:#4D4D4D;
+    margin-top: 1em;
+    margin-bottom: .3em;
+}
+
+#main-casestudy section p,
+#main-casestudy2 section p,
+#main-casestudy3 section p {
+    max-width: 30em;
+    line-height: 1.7rem;
+    margin-bottom: .5em;
+}
+
+@media(max-width: 700px) {
+    #main-casestudy,
+    #main-casestudy2,
+    #main-casestudy3,
+    #mockup-fridge {
+        width: 93%;
+    }
+}
+
+#main-casestudy3 section:last-of-type {
+    display: flex;
+    gap: 9em;
+    align-items: center;
+}
+
+#main-casestudy3 section:last-of-type img {
+    width: 15em;
+    object-fit: contain;
+}
+
+@media(max-width: 1200px) {
+    #main-casestudy3 section:last-of-type {
+        flex-direction: column;
+        gap: 3em;
+        align-items: center;
+    }
+}
+
+#tastylogo {
+    width: 14em;
+}
+
+#back-to-top {
+    box-shadow: none;
+    color: var(--section-p);
+}
 
 /***********/
 /* Contact */
@@ -1194,7 +1519,6 @@ main {
 #main-contact h2 {
     order: 1;
 }
-
 
 #main-contact p {
     margin-top: 1em;

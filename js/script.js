@@ -29,6 +29,23 @@ menuBtn.addEventListener("click", openMenu)
 
 
 
+//header veranderen wanneer je scrollt //
+
+var header = document.querySelector("#header")
+
+var scrollTrigger = 30
+
+window.addEventListener("scroll", veranderHeader)
+
+function veranderHeader() {
+
+  if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) { 
+    header.classList.add("background-header")
+    
+  } else {
+    header.classList.remove("background-header") 
+  }
+}
 
 
 

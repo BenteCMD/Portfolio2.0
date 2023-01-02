@@ -13,7 +13,12 @@ var back = document.querySelector("#back")
 
 function showSkills() {
 
+
   me.style.transform = "translateY(1000px)"
+
+  setTimeout(() => {
+    me.style.display="none"
+  }, 200)
   aboutSection.style.display="none"
 
   setTimeout(() => {
@@ -45,7 +50,6 @@ skillsCirkel.addEventListener("click", showSkills)
 
 
 function backToAbout() {
-
   visualPartDark.style.display = "none"
   codePartDark.style.display="none"
   uxPartDark.style.display="none"
@@ -57,7 +61,13 @@ function backToAbout() {
 
   aboutSection.style.display="block"
   skillsCirkel.style.display="block"
-  me.style.transform = "translateY(0)"
+  setTimeout(() => {
+    me.style.display="block"
+  }, 10)
+  setTimeout(() => {
+    me.style.transform = "translateY(0)"
+  }, 20)
+
   }
 
 back.addEventListener("click", backToAbout)
@@ -79,7 +89,6 @@ const enableDarkMode = () => {
     visualPart.src="images/visual-dark.svg"
     codePart.src="images/code-dark.svg"
     uxPart.src="images/ux-dark.svg"
-
     localStorage.setItem('darkMode', 'enabled')
 }
 
@@ -124,6 +133,8 @@ darkModeToggle.addEventListener("click", () => {
     }
    
 })
+
+
 
 
 
