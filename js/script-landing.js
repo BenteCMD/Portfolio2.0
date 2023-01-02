@@ -44,6 +44,7 @@ function openPortfolio() {
   h2.style.display="none"
   ik.style.display="none"
   clouds.style.display="none"
+  console.log("scroll")
 
   setTimeout(() => {
   aboutSection.style.display="block"
@@ -57,7 +58,7 @@ function openPortfolio() {
 
 ctaBtn.addEventListener("click", openPortfolio)
 navAbout.addEventListener("click", openPortfolio)
-window.addEventListener("scroll", openPortfolio)
+// window.addEventListener("scroll", openPortfolio)
 
 function backTolanding() {
   bg.classList.remove("zoom-in")
@@ -85,6 +86,7 @@ function backTolanding() {
 }
 
 logo.addEventListener("click", backTolanding)
+// window.addEventListener("scroll", backTolanding)
 
 
 
