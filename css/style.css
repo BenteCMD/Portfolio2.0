@@ -43,7 +43,7 @@
 
 
 @media(prefers-color-scheme: dark) {
-    :root {
+    :rootxs {
     --main-color: black;
     --main-color2: rgba(255, 255, 255, 0.6);
     --main-color3: #557091;
@@ -975,6 +975,7 @@ h1 {
     align-items: center;
     flex-wrap: wrap;
     gap: 1em;
+    margin-top: 1em;
 }
 
 @media (max-width: 1200px) {
