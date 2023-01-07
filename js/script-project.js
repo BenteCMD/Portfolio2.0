@@ -26,21 +26,21 @@ backToTopBtn.addEventListener("click", backToTop)
 
 
 
-// // animation omhoog
+// animation omhoog
 
-// var mockup = document.querySelector("#mockup-fridge")
-// var scrollTrigger1 = 700
+var mockup = document.querySelector("#mockup-fridge")
+var scrollTrigger1 = 700
 
-// function beweegOmhoog() {  
-//     if (window.scrollY >= scrollTrigger1) {
-//     mockup.classList.add("omhoog")
-//     } else {
-//         mockup.classList.remove("omhoog")
-//     }
+function beweegOmhoog() {  
+    if (window.scrollY >= scrollTrigger1) {
+    mockup.classList.add("omhoog")
+    } else {
+        mockup.classList.remove("omhoog")
+    }
 
-// }
+}
 
-// window.addEventListener("scroll", beweegOmhoog)
+window.addEventListener("scroll", beweegOmhoog)
 
 
 // header
@@ -103,13 +103,11 @@ var sun = document.querySelector("#sun")
 var sunset = document.querySelector("#sunset")
 var storyboard =  document.querySelector(".storyboard")
 var fridgeMock = document.querySelector("#fridge-mock")
-var xxxMock = document.querySelector("#xxx-mock")
   
 const enableDarkMode = () => {
     document.documentElement.classList.add("dark-mode")
     fridgeMock.src="images/mockovergang-dark.png"
     storyboard.src="images/storyboard-dark.png"
-    xxxMock.src="images/xxx-mock-dark.png"
 
     localStorage.setItem('darkMode', 'enabled')
 }
@@ -118,7 +116,6 @@ const disableDarkMode = () => {
     document.documentElement.classList.remove("dark-mode")
     fridgeMock.src="images/mockovergang.png"
     storyboard.src="images/tastyfridge-user.png"
-    xxxMock.src="images/xxx-mock.png"
   
     localStorage.setItem('darkMode', 'disabled')
 }
