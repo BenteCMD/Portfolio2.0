@@ -14,11 +14,15 @@ function openMenu() {
     if (menuBtn.classList.contains('open')) {
         setTimeout(() => {
             darkToggle.style.display="block"
-            darkToggle.style.top = "32em"
-            darkToggle.style.left = "10em"
+            darkToggle.style.top = "70%"
+            darkToggle.style.left = "45%"
+            darkToggle.style.transform = "translate(-50%, -50%)"
         }, 300)
     } else {
-        darkToggle.style.display="none"
+        // darkToggle.style.display="none"
+        darkToggle.style.top = "1.5em"
+        darkToggle.style.left = "8em"
+        darkToggle.style.transform = "translate(0%)"
     }
 
 }
@@ -40,10 +44,15 @@ window.addEventListener("scroll", veranderHeader)
 function veranderHeader() {
 
   if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) { 
-    header.classList.add("background-header")
+    if(document.documentElement.classList.contains("dark-mode")) {
+    header.classList.add("background-header-dark")
+    } else {
+      header.classList.add("background-header")
+    }
     
   } else {
     header.classList.remove("background-header") 
+    header.classList.remove("background-header-dark") 
   }
 }
 

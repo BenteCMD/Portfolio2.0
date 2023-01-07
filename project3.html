@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bente van der Zeijden - Projecten</title>
+    <title>Bente van der Zeijden - Curious Creatures</title>
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
-   
-    <header>
-        <div id="bg2"></div>
 
-        <button id="hamburger" aria-hidden="true">
-			<span class="line"></span>
-			<span class="line"></span>
-			<span class="line"></span>
-		</button>
+<body>
+    <div id="bg2"></div>
+    <header id="header">
 
         <h1>Portfolio</h1>
-       
+
+        <button id="hamburger" aria-hidden="true">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+
+    
         <a href="index.html"><svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.59 50.72">
             <defs>
                 <style>
@@ -47,7 +49,8 @@
                         d="M10.53,5.15c-1.68,.28-2.95,1.74-2.84,3.39,0,0-3.33-.47-3.33-.47,.61-2.75,3.4-4.85,6.16-4.49,0,0,.01,1.57,.01,1.57h0Z" />
                 </g>
             </g>
-        </svg></a>
+        </svg>
+    </a>
 
         <nav>
             <ul>
@@ -61,14 +64,155 @@
                     <div class="underline"></div>
                 </li>
             </ul>
+            
+            <button id="dark-mode-toggle">
+                <span id="toggle"></span>
+                <img id="sun" src="images/sun.svg" alt="zon icoon">
+                <img id="sunset" src="images/moon.svg" alt="maan icoon">
+            </button>
         </nav>
+
+        <div id="progressbar"></div>
     </header>
     <main>
-        <div id="scroll-container">
+        <div id="main-casestudy">
 
+            <a id="titel-terugknop" class="terug-knop" href="projecten.html">
+                <svg tabindex="1" id="back-arrow" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 136.55 121.1">
+                    <defs>
+                        <style>
+                            .arrow {
+                                fill: none;
+                                stroke: var(--section-p);
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                stroke-width: 20px;
+                            }
+                        </style>
+                    </defs>
+                    <g id="Layer_1" data-name="Layer 1">
+                        <polyline class="arrow" points="10.59 10.59 68.27 110.52 125.97 10.59" />
+                    </g>
+                </svg>
+            </a>
+
+            <div class="centreren">
+                <h2>Curious Creatures</h2>
+            </div>
+
+
+            <div class="centreren">
+                <img id="banner-cc" src="images/cc-proces.png" alt="ontwerpproces Curious Creatures">
+            </div>
+
+            <div id="arrow-container">
+                <svg tabindex="1" id="arrow" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 136.55 121.1">
+                    <defs>
+                        <style>
+                            .arrow {
+                                fill: none;
+                                stroke: var(--section-p);
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                stroke-width: 20px;
+                            }
+                        </style>
+                    </defs>
+                    <g id="Layer_1" data-name="Layer 1">
+                        <polyline class="arrow" points="10.59 10.59 68.27 110.52 125.97 10.59" />
+                    </g>
+                </svg>
+            </div>
+
+            <ul id="project-info">
+                <li>
+                    <p class="proj-heading">Opdrachtgever</p>
+                    <p>Curious Creatures</p>
+                </li>
+                <li>
+                    <p class="proj-heading">Rol</p>
+                    <p>Graphic Designer</p>
+                </li>
+                <li>
+                    <p class="proj-heading">Duur</p>
+                    <p>1 week</p>
+                </li>
+                <li>
+                    <p class="proj-heading">Tools</p>
+                    <p>Adobe Illustrator, pen & papier</p>
+                </li>
+            </ul>
+
+            <div>
+                <section class="centreren" id="opdracht-cc">
+                    <h4>De opdracht</h4>
+                    <p>Ik kreeg van vrienden de vraag om een mascotte logo te ontwerpen voor hun community.
+                        Curious Creatures is een community die feesten, festivals en workshops organiseert.
+                        Ze organiseren o.a. een kamp op het 'Going Nowhere' Burning Man festival in Spanje.
+                        Ze wilden graag een herkenbaar en leuke mascotte die hun kamp goed representeert.
+                    </p>
+                </section>
+            </div>
+        </div>
+ 
+        <div id="overgang"></div>
+
+        <div id="main-casestudy2">
+            <section id="proces-cc">
+                <div>
+                <h4>Het proces</h4>
+                <p> 
+                    Als kernwoorden gaven ze "mysterieus", "curious", "feesten", "community".
+                    Ik heb eerst wat ideeën op papier geschetst en vervolgens een aantal van die ideeën
+                    in Adobe Illustrator overgetrokken. Het idee dat de opdrachtgever het meest aansprak heb ik verder uitgewerkt.
+                    Ik heb het ontwerp steeds verder verbeterd aan de hand van feedback.
+                </p>
+                </div>
+                <img src="images/cc-mock.png" id="adobe illustrator project Curious Creatures">
+
+            </section>
+            <section>
+                <div id="flex-resultaat-cc">
+                <div>
+                <h4>Het resultaat</h4>
+                <h5 id="prototype">Mascot logo</h5>
+                        <p>Het resultaat is een mascotte van een kat met een bril op. De bril lijkt op de brillen die mensen in de woestijn op het Burning Man festival dragen
+                            als bescherming tegen de zandstormen. De kat is een curious creature. In de weerspiegeling van de bril zie
+                            je feestende mensen die de kat uitnodigen op de dansvloer.</p>
+                </div>
+                <img src="images/cc-cat-.png" alt="logo Curious Creatures">
+                </div>
+                <div id="foto-gallerij">
+                    <img class="cc-img" src="images/cc-img3.png" alt="projecteren mascotte">
+                    <img class="cc-img" src="images/cc-img6.png" alt="mascotte op festival">
+                    <img class="cc-img" src="images/cc-img2.png" alt="poster mascotte">
+                    <img class="cc-img" src="images/cc-img5.png" alt="projecteren mascotte">
+                    <img class="cc-img" src="images/cc-img4.png" alt="poster mascotte">
+                    <img class="cc-img" src="images/cc-img1.png" alt="houten bord mascotte verfen">
+                    <img class="cc-img" src="images/dj-cc.jpeg" alt="dj mascotte">
+                    <img class="cc-img" src="images/cc-kamp.jpeg" alt="Curious Creatures kamp">
+                    <img class="cc-img" src="images/cc-spiegel.jpeg" alt="mascotte houten bord">
+                </div>
+            </section>
+        </div>
+
+        <div id="main-casestudy3">
+            <section>
+                <div class="centreren">
+                    <h4>Reflectie</h4>
+                    <p>Ik vond het een erg leuk projectje om aan te zitten. Het logo wordt nog steeds door Curious Creatures gebruikt en zie ik terugkomen in stickers, patches, posters, armbandjes en mokken.
+                    </p>
+                </div>
+            </section>
+            <div class="centreren">
+                <button id="back-to-top">Terug naar boven</button>
+            </div>
         </div>
     </main>
     <script defer src="js/script.js"></script>
-    
+    <script defer src="js/script-project3.js"></script>
 </body>
+
 </html>

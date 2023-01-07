@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bente van der Zeijden - Projecten</title>
+    <title>Bente van der Zeijden - Menukaart</title>
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
-   
-    <header>
-        <div id="bg2"></div>
 
-        <button id="hamburger" aria-hidden="true">
-			<span class="line"></span>
-			<span class="line"></span>
-			<span class="line"></span>
-		</button> 
+<body>
+    <div id="bg2"></div>
+    <header id="header">
 
         <h1>Portfolio</h1>
-       
+
+        <button id="hamburger" aria-hidden="true">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+
         <a href="index.html"><svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.59 50.72">
             <defs>
                 <style>
@@ -47,7 +48,8 @@
                         d="M10.53,5.15c-1.68,.28-2.95,1.74-2.84,3.39,0,0-3.33-.47-3.33-.47,.61-2.75,3.4-4.85,6.16-4.49,0,0,.01,1.57,.01,1.57h0Z" />
                 </g>
             </g>
-        </svg></a>
+        </svg>
+    </a>
 
         <nav>
             <ul>
@@ -61,14 +63,224 @@
                     <div class="underline"></div>
                 </li>
             </ul>
+            
+            <button id="dark-mode-toggle">
+                <span id="toggle"></span>
+                <img id="sun" src="images/sun.svg" alt="zon icoon">
+                <img id="sunset" src="images/moon.svg" alt="maan icoon">
+            </button>
         </nav>
-    </header>
-    <main>
-        <div id="scroll-container">
 
+        <div id="progressbar"></div>
+    </header>
+
+    <main>
+        <div id="main-casestudy">
+
+            <a id="titel-terugknop" class="terug-knop" href="projecten.html">
+                <svg tabindex="1" id="back-arrow" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 136.55 121.1">
+                    <defs>
+                        <style>
+                            .arrow {
+                                fill: none;
+                                stroke: var(--section-p);
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                stroke-width: 20px;
+                            }
+                        </style>
+                    </defs>
+                    <g id="Layer_1" data-name="Layer 1">
+                        <polyline class="arrow" points="10.59 10.59 68.27 110.52 125.97 10.59" />
+                    </g>
+                </svg>
+            </a>
+
+            <div class="centreren">
+                <h2>Menukaart onepage</h2>
+            </div>
+
+
+            <div class="centreren">
+                <img id="banner-menu" src="images/menus.png" alt="ontworpen menukaarten">
+            </div>
+
+            <div id="arrow-container">
+                <svg tabindex="1" id="arrow" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 136.55 121.1">
+                    <defs>
+                        <style>
+                            .arrow {
+                                fill: none;
+                                stroke: var(--section-p);
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                stroke-width: 20px;
+                            }
+                        </style>
+                    </defs>
+                    <g id="Layer_1" data-name="Layer 1">
+                        <polyline class="arrow" points="10.59 10.59 68.27 110.52 125.97 10.59" />
+                    </g>
+                </svg>
+            </div>
+
+            <ul id="project-info">
+                <li>
+                    <p class="proj-heading">Vak</p>
+                    <p>Vormgeving</p>
+                </li>
+                <li>
+                    <p class="proj-heading">Rol</p>
+                    <p>Graphic Designer</p>
+                </li>
+                <li>
+                    <p class="proj-heading">Duur</p>
+                    <p>3 weken</p>
+                </li>
+                <li>
+                    <p class="proj-heading">Tools</p>
+                    <p>Adobe Illustrator, pen & papier</p>
+                </li>
+                <li>
+                    <p class="proj-heading">Cijfer</p>
+                    <p>9</p>
+                </li>
+            </ul>
+
+            <div>
+                <section class="centreren" id="opdracht-cc">
+                    <h4 id="title-center">De opdracht</h4>
+                    <p>De opdracht was om een single page website vorm te geven voor een restaurant met jouw naam. Ik
+                        kreeg de Nederlandse vormgever Sjoerd H. de Roos toegewezen van wie ik de visuele stijl moest
+                        onderzoeken om het vervolgens als uitgangspunt voor de vormgeving te gebruiken.
+                    </p>
+                </section>
+            </div>
+        </div>
+
+        <div id="overgang-menu">
+            <img id="menuovergang" src="images/menuovergang.png" alt="decoratie">
+        </div>
+
+        <div id="main-casestudy2">
+            <section>
+                    <div id="proces-menu">
+                        <h4>Het proces</h4>
+                        <h5>Stijlonderzoek</h5>
+                        <p>Ik begon met het onderzoeken van de stijl van SH de Roos.</p>
+                        <img src="images/research verslag SH de Roos-1.png" id="onderzoeksverslag SH de Roos">
+                    
+                        <div class="stijl-flex">
+                            <img src="images/stijl-deroos.png" alt="werken van SH de Roos">
+                            <ul>
+                                <li>
+                                    <p>Strakke geometrische vormen met dubbele lijnen</p>
+                                </li>
+                                <li>
+                                    <p>Vaak sobere belettering</p>
+                                </li>
+                                <li>
+                                    <p>Veel subtiele en gedetailleerde versieringen</p>
+                                </li>
+                                <li>
+                                    <p>Repetitieve patronen</p>
+                                </li>
+                                <li>
+                                    <p>Doffe aardse kleuren. Maximaal drie verschillende kleuren</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="centreren">
+                    <h5 id="h5">Schetsen</h5>
+                    <p>Daarna ben ik verschillende variaties van de iconen, het beeldmerk en vervolgens de gehele
+                        webpage gaan schetsen en uitwerken.</p>
+                    </div>
+                    <div class="schetsen-flex">
+                        <img class="schetsen" src="images/schetsen6.png" id="schetsen iconen">
+                        <img class="schetsen" src="images/schetsen5.png" id="schetsen iconen">
+                        <img src="images/iconsicons-vrm.svg" id="iconen menu">
+                    </div>
+                    <div class="schetsen-flex">
+                        <img class="schetsen" src="images/schetsen1.png" id="schetsen logo">
+                        <img src="images/logo-vrm.png" id="logo menu">
+                    </div>
+                    <div class="schetsen-flex">
+                        <img class="schetsen2" src="images/schetsen2.png" id="schetsen onepage">
+                        <img class="schetsen2" src="images/schetsen3.png" id="schetsen onepage">
+                        <img class="schetsen2" src="images/schetsen4.png" id="schetsen onepage">
+                    </div>
+            </section>
+            <section>
+                <div class="centreren">
+                    <div id="proces-menu">
+                        <h4>Het resultaat</h4>
+                        <h5 id="prototype">Menukaart onepage</h5>
+                        <p>Het resultaat zijn drie verschillende versies van dezelfde singlepage menukaart gebaseerd op de
+                            stijl van SH de Roos.</p>
+                    </div>
+                    <div id="menukaarten-container">
+                        <div class="stijl-flex">
+                            <div>
+                                <h5>Versie 1</h5>
+                                <img class="menukaarten" src="images/menukaart1.png" alt="menukaart">
+                            </div>
+                            <div>
+                                <h6>Inspiratiebronnen</h6>
+                                <img class="inspo" src="images/inspo4.png" alt="inspiratie SH de Roos">
+                                <img class="inspo" src="images/inspo5.png" alt="inspiratie SH de Roos">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="stijl-flex">
+                                <div>
+                                    <h5>Versie 2</h5>
+                                    <img class="menukaarten" src="images/menukaart2.png" alt="menukaart">
+                                </div>
+                                <div>
+                                    <h6>Inspiratiebronnen</h6>
+                                    <img class="inspo" src="images/inspo2.png" alt="inspiratie SH de Roos">
+                                    <img class="inspo" src="images/inspo6.png" alt="inspiratie SH de Roos">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stijl-flex">
+                            <div>
+                                <h5>Versie 3</h5>
+                                <img class="menukaarten" src="images/menukaart3.png" alt="menukaart">
+                            </div>
+                            <div>
+                                <h6>Inspiratiebronnen</h6>
+                                <img class="inspo" src="images/inspo1.png" alt="inspiratie SH de Roos">
+                                <img class="inspo" src="images/inspo3.png" alt="inspiratie SH de Roos">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="main-casestudy3">
+            <section>
+                <div class="centreren">
+                    <h4>Reflectie</h4>
+                    <p>Ik heb veel geleerd over vormgeving dit project. Typografie, visuele hiërarchie, vorm, kleur,
+                        compositie kwamen allemaal aan bod. De opdracht was erg vrij, er was veel ruimte om te
+                        experimenteren. Wat ik vooral meeneem is de kunst om snel veel verschillende versies te
+                        ontwerpen, in plaats van te blijven haken op één idee.
+                    </p>
+                </div>
+                <img src="images/deco.svg" alt="decoratie">
+            </section>
+            <div class="centreren">
+                <button id="back-to-top">Terug naar boven</button>
+            </div>
         </div>
     </main>
     <script defer src="js/script.js"></script>
-    
+    <script defer src="js/script-project4.js"></script>
 </body>
+
 </html>

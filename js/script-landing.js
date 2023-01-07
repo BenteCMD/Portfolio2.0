@@ -36,6 +36,7 @@ var codingInfo = document.querySelector("#coding-info")
 var visualInfo = document.querySelector("#visual-info")
 var uxInfo = document.querySelector("#ux-info")
 var fotoIk = document.querySelector("#ik")
+var wind = new Audio('sounds/wind.mp3');
 
 function openPortfolio() { 
   bg.classList.add("zoom-in")
@@ -44,7 +45,8 @@ function openPortfolio() {
   h2.style.display="none"
   ik.style.display="none"
   clouds.style.display="none"
-  console.log("scroll")
+  wind.play();
+  wind.volume = 0.5;
 
   setTimeout(() => {
   aboutSection.style.display="block"
@@ -62,6 +64,9 @@ navAbout.addEventListener("click", openPortfolio)
 
 function backTolanding() {
   bg.classList.remove("zoom-in")
+  wind.play();
+  wind.volume = 0.5;
+
   setTimeout(() => {
     ctaBtn.style.display="block"
   }, 1350)
@@ -173,13 +178,13 @@ var sunset = document.querySelector("#sunset")
 
 const enableDarkMode = () => {
     document.documentElement.classList.add("dark-mode")
-    skillsCirkel.src="images/skills-dark.png"
+    skillsCirkel.src="images/skillsdiagram-dark.svg"
     visualPart.src="images/visual-dark.svg"
     codePart.src="images/code-dark.svg"
     uxPart.src="images/ux-dark.svg"
 
     setTimeout(() => {
-      ik.src="images/moi-darkmode.svg"
+      ik.src="images/ik-dark.svg"
     }, 100)
     setTimeout(() => {
       clouds.src="images/clouds-darkmode.svg"
@@ -210,7 +215,7 @@ if(darkMode === 'enabled') {
     setTimeout(() => {
       sunset.style.display="block"
       sun.style.display="none"
-      toggle.style.backgroundColor = "#ed686d"
+      // toggle.style.backgroundColor = "#ed686d"
     }, 100)
     toggle.classList.toggle("toggle")
 } 
@@ -224,7 +229,7 @@ darkModeToggle.addEventListener("click", () => {
         setTimeout(() => {
           sunset.style.display="block"
           sun.style.display="none"
-          toggle.style.backgroundColor = "#ed686d"
+          // toggle.style.backgroundColor = "#ed686d"
         }, 100)
         
     } else {

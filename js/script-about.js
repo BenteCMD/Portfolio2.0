@@ -85,7 +85,7 @@ var sunset = document.querySelector("#sunset")
 
 const enableDarkMode = () => {
     document.documentElement.classList.add("dark-mode")
-    skillsCirkel.src="images/skills-dark.png"
+    skillsCirkel.src="images/skillsdiagram-dark.svg"
     visualPart.src="images/visual-dark.svg"
     codePart.src="images/code-dark.svg"
     uxPart.src="images/ux-dark.svg"
@@ -107,7 +107,7 @@ if(darkMode === 'enabled') {
     setTimeout(() => {
       sunset.style.display="block"
       sun.style.display="none"
-      toggle.style.backgroundColor = "#ed686d"
+      // toggle.style.backgroundColor = "#ed686d"
     }, 100)
     toggle.classList.toggle("toggle")
 } 
@@ -121,7 +121,7 @@ darkModeToggle.addEventListener("click", () => {
         setTimeout(() => {
           sunset.style.display="block"
           sun.style.display="none"
-          toggle.style.backgroundColor = "#ed686d"
+          // toggle.style.backgroundColor = "#ed686d"
         }, 100)
     } else {
         disableDarkMode()

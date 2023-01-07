@@ -8,15 +8,12 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body id="project1">
     <div id="bg2"></div>
+
     <header id="header">
 
-        <button id="dark-mode-toggle">
-            <span id="toggle"></span>
-            <img id="sun" src="images/sun.svg" alt="zon icoon">
-            <img id="sunset" src="images/sunset.svg" alt="zonsondergang icoon">
-        </button>
+        <h1>Portfolio</h1>
 
         <button id="hamburger" aria-hidden="true">
             <span class="line"></span>
@@ -24,37 +21,37 @@
             <span class="line"></span>
         </button>
 
-        <h1>Portfolio</h1>
-
+      
         <a href="index.html"><svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.59 50.72">
-                <defs>
-                    <style>
-                        .cls-1 {
-                            fill: var(--main-color2);
-                        }
+            <defs>
+                <style>
+                    .cls-1 {
+                        fill: var(--main-color2);
+                    }
 
-                        .cls-2 {
-                            fill: none;
-                            stroke: var(--main-color2);
-                            stroke-miterlimit: 10;
-                            stroke-width: 3.37px;
-                        }
-                    </style>
-                </defs>
-                <g id="text">
-                    <g>
-                        <path class="cls-2" d="M6.09,7.95c.13,1,.23,2.14,.26,3.45,.34,11.78-3.8,32.36-4.71,36.79" />
-                        <path class="cls-1"
-                            d="M.3,.09c4.5-.8,6.78,3.95,7.46,7.63,0,0-3.34,.45-3.34,.45C4.3,5.38,3.78,1.71,.4,1.67c0,0-.1-1.58-.1-1.58H.3Z" />
-                        <path class="cls-2"
-                            d="M13.91,49.04c.73-.04,1.45-.13,2.16-.27,6.75-1.36,11.84-7.33,11.84-14.49,0-8.16-6.62-14.78-14.78-14.78-2.67,0-5.17,.71-7.33,1.94" />
-                        <path class="cls-1"
-                            d="M15.26,38.17c-3-.85-6.32,1.61-6.23,4.69-.1,2.84,2.78,5.17,5.46,4.43,0,0,.61,3.31,.61,3.31-2.27,.35-4.64-.41-6.23-1.96-3.34-3-2.83-8.84,.97-11.12,1.76-1.11,3.95-1.36,5.86-.66l-.44,1.32h0Z" />
-                        <path class="cls-1"
-                            d="M10.53,5.15c-1.68,.28-2.95,1.74-2.84,3.39,0,0-3.33-.47-3.33-.47,.61-2.75,3.4-4.85,6.16-4.49,0,0,.01,1.57,.01,1.57h0Z" />
-                    </g>
+                    .cls-2 {
+                        fill: none;
+                        stroke: var(--main-color2);
+                        stroke-miterlimit: 10;
+                        stroke-width: 3.37px;
+                    }
+                </style>
+            </defs>
+            <g id="text">
+                <g>
+                    <path class="cls-2" d="M6.09,7.95c.13,1,.23,2.14,.26,3.45,.34,11.78-3.8,32.36-4.71,36.79" />
+                    <path class="cls-1"
+                        d="M.3,.09c4.5-.8,6.78,3.95,7.46,7.63,0,0-3.34,.45-3.34,.45C4.3,5.38,3.78,1.71,.4,1.67c0,0-.1-1.58-.1-1.58H.3Z" />
+                    <path class="cls-2"
+                        d="M13.91,49.04c.73-.04,1.45-.13,2.16-.27,6.75-1.36,11.84-7.33,11.84-14.49,0-8.16-6.62-14.78-14.78-14.78-2.67,0-5.17,.71-7.33,1.94" />
+                    <path class="cls-1"
+                        d="M15.26,38.17c-3-.85-6.32,1.61-6.23,4.69-.1,2.84,2.78,5.17,5.46,4.43,0,0,.61,3.31,.61,3.31-2.27,.35-4.64-.41-6.23-1.96-3.34-3-2.83-8.84,.97-11.12,1.76-1.11,3.95-1.36,5.86-.66l-.44,1.32h0Z" />
+                    <path class="cls-1"
+                        d="M10.53,5.15c-1.68,.28-2.95,1.74-2.84,3.39,0,0-3.33-.47-3.33-.47,.61-2.75,3.4-4.85,6.16-4.49,0,0,.01,1.57,.01,1.57h0Z" />
                 </g>
-            </svg></a>
+            </g>
+        </svg>
+    </a>
 
         <nav>
             <ul>
@@ -68,13 +65,21 @@
                     <div class="underline"></div>
                 </li>
             </ul>
+            
+            <button id="dark-mode-toggle">
+                <span id="toggle"></span>
+                <img id="sun" src="images/sun.svg" alt="zon icoon">
+                <img id="sunset" src="images/moon.svg" alt="maan icoon">
+            </button>
         </nav>
+
+        <div id="progressbar"></div>
     </header>
 
     <main>
         <div id="main-casestudy">
 
-             <a id="titel-terugknop" class="terug-knop" href="projecten.html">
+            <a id="titel-terugknop" class="terug-knop" href="projecten.html">
                 <svg tabindex="1" id="back-arrow" data-name="arrow" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 136.55 121.1">
                     <defs>
@@ -92,11 +97,11 @@
                         <polyline class="arrow" points="10.59 10.59 68.27 110.52 125.97 10.59" />
                     </g>
                 </svg>
-             </a>
-            
-               
+            </a>
+
+            <div class="centreren">
                 <h2>Responsive Multi-device Experience</h2>
-        
+            </div>
 
             <div id="img-container">
                 <img class="storyboard" src="images/tastyfridge-user.png"
@@ -167,25 +172,30 @@
         </div>
 
         <div id="mockup-fridge">
-            <img src="images/mockovergang.png" alt="mock-up">
+            <img id="fridge-mock" src="images/mockovergang.png" alt="mock-up">
         </div>
 
-        <div id="main-casestudy2">
+        <div id="main-casestudy2" class="lower">
             <section>
                 <h4>Het proces</h4>
-                <p>Allereest heb ik aan de hand van de gebruikersdoelen een <span class="bolder2">User Scenario</span>
+                <p>Allereest heb ik aan de hand van de gebruikersdoelen een <a class="verwijzingen"
+                        href="#user-scenario"><span class="bolder2">User Scenario</span></a>
                     geschreven.
-                    Vervolgens heb ik per stadium bedacht welk device het meest geschikt zou zijn door a.d.h.v. <span
-                        class="bolder2">D.E.T.A.I.L.S</span> naar de context te kijken.
-                    Ik heb een <span class="bolder2">User Requirement List</span> opgesteld en op basis daarvan features
+                    Vervolgens heb ik per stadium bedacht welk device het meest geschikt zou zijn door a.d.h.v. <a
+                        class="verwijzingen" href="#context-map"><span class="bolder2">D.E.T.A.I.L.S</span></a> naar de
+                    context te kijken.
+                    Ik heb een <a class="verwijzingen" href="#url"><span class="bolder2">User Requirement
+                            List</span></a> opgesteld en op basis daarvan features
                     bedacht.
-                    De oplossing heb ik eerst gevisualiseerd in <span class="bolder2">Wireframes</span> en deze
+                    De oplossing heb ik eerst gevisualiseerd in <a class="verwijzingen" href="#wireflow"><span
+                            class="bolder2">Wireframes</span></a> en deze
                     vervolgens uitgewerkt tot een nette
-                    <span class="bolder2">Screenflow</span> zodat de functionaliteit van het product op alle gebruikte
+                    <a class="verwijzingen" href="#screenflow"><span class="bolder2">Screenflow</span></a> zodat de
+                    functionaliteit van het product op alle gebruikte
                     apparaten volledig in kaart
                     gebracht is.
                 </p>
-                <article>
+                <article id="user-scenario">
                     <h5>User Scenario</h5>
                     <div id="user-scenario-p">
                         <p>Anna plant thuis op haar smart fridge maaltijden in voor deze week. Ze kiest een aantal
@@ -207,23 +217,23 @@
                     </div>
                 </article>
                 <article>
-                    <div class="centreren">
+                    <div id="context-map" class="centreren">
                         <h5>Context Map</h5>
                         <img src="images/Context-min.png" alt="context map">
                     </div>
-                    <div class="centreren">
+                    <div id="url" class="centreren">
                         <h5>Product Requirement List</h5>
                         <img src="images/url.png" alt="user requirement list">
                     </div>
-                    <div class="centreren">
+                    <div id="wireflow" class="centreren">
                         <h5>Wireflow</h5>
                         <img class="wireflow" src="images/wireflow-min.png" alt="wireflow">
                     </div>
                 </article>
             </section>
             <section class="centreren">
-                <h4>Het resultaat</h4>
-                <h5>Screenflow</h5>
+                <h4>Het resultaat: Tasty Fridge</h4>
+                <h5 id="screenflow">Screenflow</h5>
                 <img class="wireflow" src="images/Screenflow-min.png" alt="screenflow">
             </section>
         </div>
@@ -253,7 +263,7 @@
         </div>
     </main>
     <script defer src="js/script.js"></script>
-    <script defer src="js/script-projects.js"></script>
+    <script defer src="js/script-project.js"></script>
 </body>
 
 </html>
