@@ -205,6 +205,10 @@ button {
 /*   Landing page   */
 /********************/
 
+#body-landing {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
 
 header nav ul {
     list-style: none;
@@ -539,7 +543,7 @@ h1 {
     width: 13.5em;
     position: absolute;
     left: 42%;
-    top: 34%;
+    top: 32.5%;
     transition: .5s;
     cursor: pointer;
 }
@@ -765,7 +769,13 @@ h1 {
 #hide {
     display: none;
     transition: .3s ease;
-    margin-top: 7em;
+    margin-top: 2.5em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll;
 }
 
 .wider {
