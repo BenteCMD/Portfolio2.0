@@ -736,7 +736,7 @@ h1 {
 /*************/
 
 #main-about {
-    margin-top: 5.5em;
+    margin-top: 7.5em;
 }
 
 .verschijnen {
@@ -769,7 +769,7 @@ h1 {
 #hide {
     display: none;
     transition: .3s ease;
-    margin-top: 2.5em;
+    margin-top: 3.5em;
     position: absolute;
     top: 0;
     right: 0;
@@ -933,6 +933,12 @@ h1 {
     gap: 1em;
 }
 
+@media (max-width: 1200px) {
+    #info-div {
+        margin-top: 2em;
+    }
+}
+
 #back {
     border: none;
     background: none;
@@ -941,7 +947,7 @@ h1 {
     opacity: 0%;
     position: absolute;
     color: var(--section-p);
-    top: 140px;
+    top: 160px;
     left: 120px;
 }
 
