@@ -41,6 +41,59 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 
+
+@media(prefers-color-scheme: dark) {
+    :root {
+    --main-color: black;
+    --main-color2: rgba(255, 255, 255, 0.6);
+    --main-color3: #557091;
+    --btn-bg: #4d4d4d;
+    --home-h2: rgba(255, 255, 255, 0.6);
+    --section-h2: #4c637f;
+    --section-clr: rgba(25, 25, 25, 0.8);
+    --section-p: white;
+    --box-shadow: black;
+    --btn-clr: white;
+    --btn-clr2: white;
+    --eye-clr: #557091;
+    --naam: #6c8aaf;
+    --wolk: rgb(130, 151, 164, 0.7);
+    --case-bg: linear-gradient(black, rgba(0,0,0, 0.8) 15%);
+    --case-overgang: linear-gradient(rgba(0, 0, 0, 0.6), rgb(0, 0, 0) 100%);
+    --bg: url(../images/nightmode-bg.png);
+    --bg2: url(../images/dark-bg2.svg);
+    }
+}
+
+@media(prefers-color-scheme: light) {
+    :root { 
+        --main-color: white;
+        --main-color2: #4D4D4D;
+        --main-color3: #89A575;
+        --btn-bg: white;
+        --home-h2: white;
+        --section-h2: #89A575;
+        --section-clr: rgba(255,255,255,0.8);
+        --section-p: #4d4d4d;
+        --box-shadow: #4d4d4d;
+        --btn-clr: white;
+        --btn-clr2: #89A575;
+        --eye-clr: #89A575;
+        --naam: #89A575;
+        --wolk: rgba(255,255,255,0.8);
+        --case-bg: linear-gradient(white, rgba(255,255,255, 0.8) 15%);
+        --case-overgang: linear-gradient(rgba(255,255,255,0.8), white);
+        --bg: url(../images/bg-portfolio.svg);
+        --bg2: url(../images/bg2.svg);
+    
+        --main-font:  "Satoshi Regular", "Century Gothic", "Roboto", "sans-serif";
+        --kopjes-font: "Satoshi Black", "fantasy", "sans-serif";
+        --kopjes-font-h2: "Satoshi Bold", "Century Gothic Bold", "sans-serif";
+        --links-font: "Satoshi Medium", "Century Gothic", "Roboto", "sans-serif";
+    }
+}
+
+
 :root {
     --main-color: white;
     --main-color2: #4D4D4D;
@@ -86,58 +139,6 @@
     --case-overgang: linear-gradient(rgba(0, 0, 0, 0.6), rgb(0, 0, 0) 100%);
     --bg: url(../images/nightmode-bg.png);
     --bg2: url(../images/dark-bg2.svg);
-}
-
-@media(prefers-color-scheme: dark) {
-    :root {
-    --main-color: black;
-    --main-color2: rgba(255, 255, 255, 0.6);
-    --main-color3: #557091;
-    --btn-bg: #4d4d4d;
-    --home-h2: rgba(255, 255, 255, 0.6);
-    --section-h2: #4c637f;
-    --section-clr: rgba(25, 25, 25, 0.8);
-    --section-p: white;
-    --box-shadow: black;
-    --btn-clr: white;
-    --btn-clr2: white;
-    --eye-clr: #557091;
-    --naam: #6c8aaf;
-    --wolk: rgb(130, 151, 164, 0.7);
-    --case-bg: linear-gradient(black, rgba(0,0,0, 0.8) 15%);
-    --case-overgang: linear-gradient(rgba(0, 0, 0, 0.6), rgb(0, 0, 0) 100%);
-    --bg: url(../images/nightmode-bg.png);
-    --bg2: url(../images/dark-bg2.svg);
-    }
-}
-
-@media(prefers-color-scheme: light) {
-    :root,
-    .dark-mode { 
-        --main-color: white;
-        --main-color2: #4D4D4D;
-        --main-color3: #89A575;
-        --btn-bg: white;
-        --home-h2: white;
-        --section-h2: #89A575;
-        --section-clr: rgba(255,255,255,0.8);
-        --section-p: #4d4d4d;
-        --box-shadow: #4d4d4d;
-        --btn-clr: white;
-        --btn-clr2: #89A575;
-        --eye-clr: #89A575;
-        --naam: #89A575;
-        --wolk: rgba(255,255,255,0.8);
-        --case-bg: linear-gradient(white, rgba(255,255,255, 0.8) 15%);
-        --case-overgang: linear-gradient(rgba(255,255,255,0.8), white);
-        --bg: url(../images/bg-portfolio.svg);
-        --bg2: url(../images/bg2.svg);
-    
-        --main-font:  "Satoshi Regular", "Century Gothic", "Roboto", "sans-serif";
-        --kopjes-font: "Satoshi Black", "fantasy", "sans-serif";
-        --kopjes-font-h2: "Satoshi Bold", "Century Gothic Bold", "sans-serif";
-        --links-font: "Satoshi Medium", "Century Gothic", "Roboto", "sans-serif";
-    }
 }
 
 
