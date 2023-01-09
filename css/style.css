@@ -1457,7 +1457,6 @@ h1 {
     list-style: none;
     max-width: 21em;
     height: fit-content;
-    padding: .3em;
     background-color: var(--main-color);
     border-radius: 5px;
 
