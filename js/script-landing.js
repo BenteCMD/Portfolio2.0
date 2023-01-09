@@ -6,12 +6,7 @@ var pupils = document.getElementsByClassName("ball")
 document.onmousemove = function(eye){
     var x = eye.clientX * 100 / window.innerWidth + "%" 
     var y = eye.clientY * 100 / window.innerHeight + "%" 
-    // clientX => horizontale coördinaten van je muis
-    // clientY => verticale coördinaten van je muis
-    // window.innerWidth => browser width
-    // window.innerHeight => browser height
-    // rekensom: je vermenigvuldigd de coördinaten eerst met 100 en dan deel je het door het breedte/hoogte percentage, zodat het relatief is
-
+  
     for(var i=0;i<6;i++) {
         pupils[i].style.left = x
         pupils[i].style.top = y
@@ -83,7 +78,6 @@ function backTolanding() {
     clouds.style.display="block"
       }, 1350)
   aboutSection.style.display="none"
-  // fotoIk.classList.remove("ik-animation")
   codingInfo.classList.remove("coding-info-animation")
   visualInfo.classList.remove("visual-info-animation")
   uxInfo.classList.remove("ux-info-animation")
@@ -107,7 +101,7 @@ var skillsCirkel = document.querySelector("#skills-diagram")
 var aboutContent = document.querySelector("#about-flex")
 var about = document.querySelector("#about-section")
 var me = document.querySelector("#ik")
-var back = document.querySelector("#back")
+var back = document.querySelector("#back2")
 
 
 function showSkills() {
@@ -215,7 +209,6 @@ if(darkMode === 'enabled') {
     setTimeout(() => {
       sunset.style.display="block"
       sun.style.display="none"
-      // toggle.style.backgroundColor = "#ed686d"
     }, 100)
     toggle.classList.toggle("toggle")
 } 
@@ -229,7 +222,7 @@ darkModeToggle.addEventListener("click", () => {
         setTimeout(() => {
           sunset.style.display="block"
           sun.style.display="none"
-          // toggle.style.backgroundColor = "#ed686d"
+  
         }, 100)
         
     } else {

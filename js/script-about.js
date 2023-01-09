@@ -107,7 +107,6 @@ if(darkMode === 'enabled') {
     setTimeout(() => {
       sunset.style.display="block"
       sun.style.display="none"
-      // toggle.style.backgroundColor = "#ed686d"
     }, 100)
     toggle.classList.toggle("toggle")
 } 
@@ -121,7 +120,7 @@ darkModeToggle.addEventListener("click", () => {
         setTimeout(() => {
           sunset.style.display="block"
           sun.style.display="none"
-          // toggle.style.backgroundColor = "#ed686d"
+  
         }, 100)
     } else {
         disableDarkMode()
