@@ -174,7 +174,7 @@ body {
 @media(max-width: 400px) {
     .bg-change {
         bottom: 100px !important;
-        right: 147px !important;
+        right: 143px !important;
     }
 }
 
@@ -813,6 +813,13 @@ h1 {
     margin-top: 7.5em;
 }
 
+@media(max-width: 1250px) {
+    #main-about {
+        margin-top: 5.5em;
+    }
+    
+}
+
 .verschijnen {
     opacity: 100%;
     transition: 1.3s;
@@ -849,6 +856,12 @@ h1 {
     bottom: 0;
     left: 0;
     overflow-y: scroll;
+}
+
+@media(max-width: 1250px) {
+    #hide {
+        margin-top: 2.3em;
+    }
 }
 
 .wider {
