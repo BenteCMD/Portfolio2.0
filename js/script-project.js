@@ -3,8 +3,8 @@
 
 // scrolleffect
 
-var projectInfo = document.querySelector("#project-info")
-var arrow = document.querySelector("#arrow")
+var projectInfo = document.querySelector(".project-info")
+var arrow = document.querySelector("#arrow1")
 
 function naarProjectInfo() {
     projectInfo.scrollIntoView({behavior: 'smooth'})
@@ -13,7 +13,94 @@ function naarProjectInfo() {
 arrow.addEventListener("click", naarProjectInfo)
 
 
-var topPage = document.querySelector("#main-casestudy")
+
+
+var opdracht = document.querySelector("#opdracht")
+var opdrachth3 = document.querySelector("#opdracht h3")
+var opdrachtA = document.querySelector("#opdracht-a")
+
+function naarOpdracht() {
+    opdracht.scrollIntoView({behavior: 'smooth'})
+}
+
+opdrachtA.addEventListener("click", naarOpdracht)
+
+
+function veranderKleur() {
+    var hT = $('#opdracht h3').offset().top,
+        hH = $('#opdracht h3').outerHeight(),
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    if (wS > (hT+hH-wH)){
+        opdrachtA.classList.add("bolder")
+        procesA.classList.remove("bolder")
+        resultaatA.classList.remove("bolder")
+    }
+ }
+
+ window.addEventListener("scroll", veranderKleur)
+
+
+
+
+var proces = document.querySelector("#proces")
+var procesh3 = document.querySelector("#proces h3")
+var procesA = document.querySelector("#proces-a")
+
+function naarProces() {
+    proces.scrollIntoView({behavior: 'smooth'})
+}
+
+procesA.addEventListener("click", naarProces)
+
+
+function veranderKleur2() {
+    var hT = $('#proces h3').offset().top,
+        hH = $('#proces h3').outerHeight(),
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    if (wS > (hT+hH-wH)){
+        procesA.classList.add("bolder")
+        opdrachtA.classList.remove("bolder")
+        resultaatA.classList.remove("bolder")
+    }
+ }
+
+ window.addEventListener("scroll", veranderKleur2)
+
+
+
+
+var resultaat = document.querySelector("#resultaat")
+var resultaath3 = document.querySelector("#resultaat h3")
+var resultaatA = document.querySelector("#resultaat-a")
+
+function naarResultaat() {
+    resultaat.scrollIntoView({behavior: 'smooth'})
+}
+
+resultaatA.addEventListener("click", naarResultaat)
+
+
+function veranderKleur3() {
+    var hT = $('#resultaat h3').offset().top,
+        hH = $('#resultaat h3').outerHeight(),
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    if (wS > (hT+hH-wH)){
+        resultaatA.classList.add("bolder")
+        opdrachtA.classList.remove("bolder")
+        procesA.classList.remove("bolder")
+    }
+ }
+
+ window.addEventListener("scroll", veranderKleur3)
+
+
+
+
+
+var topPage = document.querySelector(".casestudy")
 var backToTopBtn = document.querySelector("#back-to-top")
 
 function backToTop() {
@@ -28,12 +115,12 @@ backToTopBtn.addEventListener("click", backToTop)
 
 // animation omhoog
 
-var mockup = document.querySelector("#mockup-fridge")
+var mockup = document.querySelector(".overgang-sections")
 var scrollTrigger1 = 700
 
-function beweegOmhoog() {  
+function beweegOmhoog() {
     if (window.scrollY >= scrollTrigger1) {
-    mockup.classList.add("omhoog")
+        mockup.classList.add("omhoog")
     } else {
         mockup.classList.remove("omhoog")
     }
@@ -53,12 +140,12 @@ window.addEventListener("scroll", veranderHeader)
 
 function veranderHeader() {
 
-  if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) { 
-    header.classList.add("background-header-project")
-    
-  } else {
-    header.classList.remove("background-header-project") 
-  }
+    if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) {
+        header.classList.add("background-header-project")
+
+    } else {
+        header.classList.remove("background-header-project")
+    }
 }
 
 
@@ -68,7 +155,7 @@ var scrollTrigger2 = 80
 var terugknop = document.querySelector("#titel-terugknop")
 
 function naarBeneden() {
-    if (window.scrollY >= scrollTrigger2 || window.pageYOffset >= scrollTrigger2) { 
+    if (window.scrollY >= scrollTrigger2 || window.pageYOffset >= scrollTrigger2) {
         terugknop.style.transform = "translateY(-45px)"
     } else {
         terugknop.style.transform = "translateY(0px)"
@@ -101,53 +188,80 @@ const darkModeToggle = document.querySelector("#dark-mode-toggle")
 var toggle = document.querySelector("#toggle")
 var sun = document.querySelector("#sun")
 var sunset = document.querySelector("#sunset")
-var storyboard =  document.querySelector(".storyboard")
+var storyboard = document.querySelector(".project-banner")
 var fridgeMock = document.querySelector("#fridge-mock")
-  
+
 const enableDarkMode = () => {
     document.documentElement.classList.add("dark-mode")
-    fridgeMock.src="images/mockovergang-dark.png"
-    storyboard.src="images/storyboard-dark.png"
+    fridgeMock.src = "images/mockovergang-dark.png"
+    storyboard.src = "images/storyboard-dark.png"
 
     localStorage.setItem('darkMode', 'enabled')
 }
 
 const disableDarkMode = () => {
     document.documentElement.classList.remove("dark-mode")
-    fridgeMock.src="images/mockovergang.png"
-    storyboard.src="images/tastyfridge-user.png"
-  
+    fridgeMock.src = "images/mockovergang.png"
+    storyboard.src = "images/tastyfridge-user.png"
+
     localStorage.setItem('darkMode', 'disabled')
 }
 
 
-if(darkMode === 'enabled') {
+if (darkMode === 'enabled') {
     enableDarkMode()
     setTimeout(() => {
-      sunset.style.display="block"
-      sun.style.display="none"
+        sunset.style.display = "block"
+        sun.style.display = "none"
     }, 100)
     toggle.classList.toggle("toggle")
-} 
+}
 
 darkModeToggle.addEventListener("click", () => {
     darkMode = localStorage.getItem("darkMode")
     toggle.classList.toggle("toggle")
-    
-    if(darkMode !== 'enabled') {
+
+    if (darkMode !== 'enabled') {
         enableDarkMode()
         setTimeout(() => {
-            sunset.style.display="block"
-            sun.style.display="none"
-          }, 100)
+            sunset.style.display = "block"
+            sun.style.display = "none"
+        }, 100)
     } else {
         disableDarkMode()
         setTimeout(() => {
-            sunset.style.display="none"
-            sun.style.display="block"
-          }, 100)
+            sunset.style.display = "none"
+            sun.style.display = "block"
+        }, 100)
     }
-   
+
 })
 
 
+// nav
+
+// var scrollTrigger3= 300
+// var scrollTrigger4 = 700
+// var scrollTrigger5 = 1000
+
+// var opdracht = document.querySelector("#opdracht-a")
+// var proces = document.querySelector("#proces-a")
+// var resultaat = document.querySelector("#resultaat-a")
+
+// function veranderKleur() {
+
+//     if (window.scrollY >= scrollTrigger3 || window.pageYOffset >= scrollTrigger3) {
+//         opdracht.classList.add("bolder")
+//     }
+
+//     if (window.scrollY >= scrollTrigger4 || window.pageYOffset >= scrollTrigger4) {
+//         proces.classList.add("bolder")
+//     }
+
+//     if (window.scrollY >= scrollTrigger5|| window.pageYOffset >= scrollTrigger5) {
+//         resultaat.classList.add("bolder")
+//     }
+
+// }
+
+// window.addEventListener("scroll", veranderKleur)

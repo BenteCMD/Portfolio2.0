@@ -3,8 +3,8 @@
 
 // scrolleffect
 
-var projectInfo = document.querySelector("#project-info")
-var arrow = document.querySelector("#arrow")
+var projectInfo = document.querySelector(".project-info")
+var arrow = document.querySelector("#arrow1")
 
 function naarProjectInfo() {
     projectInfo.scrollIntoView({behavior: 'smooth'})
@@ -13,7 +13,94 @@ function naarProjectInfo() {
 arrow.addEventListener("click", naarProjectInfo)
 
 
-var topPage = document.querySelector("#main-casestudy")
+
+
+var opdracht = document.querySelector("#opdracht")
+var opdrachth3 = document.querySelector("#opdracht h3")
+var opdrachtA = document.querySelector("#opdracht-a")
+
+function naarOpdracht() {
+    opdracht.scrollIntoView({behavior: 'smooth'})
+}
+
+opdrachtA.addEventListener("click", naarOpdracht)
+
+
+function veranderKleur() {
+    var hT = $('#opdracht h3').offset().top,
+        hH = $('#opdracht h3').outerHeight(),
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    if (wS > (hT+hH-wH)){
+        opdrachtA.classList.add("bolder")
+        procesA.classList.remove("bolder")
+        resultaatA.classList.remove("bolder")
+    }
+ }
+
+ window.addEventListener("scroll", veranderKleur)
+
+
+
+
+var proces = document.querySelector("#proces")
+var procesh3 = document.querySelector("#proces h3")
+var procesA = document.querySelector("#proces-a")
+
+function naarProces() {
+    proces.scrollIntoView({behavior: 'smooth'})
+}
+
+procesA.addEventListener("click", naarProces)
+
+
+function veranderKleur2() {
+    var hT = $('#proces h3').offset().top,
+        hH = $('#proces h3').outerHeight(),
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    if (wS > (hT+hH-wH)){
+        procesA.classList.add("bolder")
+        opdrachtA.classList.remove("bolder")
+        resultaatA.classList.remove("bolder")
+    }
+ }
+
+ window.addEventListener("scroll", veranderKleur2)
+
+
+
+
+var resultaat = document.querySelector("#resultaat")
+var resultaath3 = document.querySelector("#resultaat h3")
+var resultaatA = document.querySelector("#resultaat-a")
+
+function naarResultaat() {
+    resultaat.scrollIntoView({behavior: 'smooth'})
+}
+
+resultaatA.addEventListener("click", naarResultaat)
+
+
+function veranderKleur3() {
+    var hT = $('#resultaat h3').offset().top,
+        hH = $('#resultaat h3').outerHeight(),
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    if (wS > (hT+hH-wH)){
+        resultaatA.classList.add("bolder")
+        opdrachtA.classList.remove("bolder")
+        procesA.classList.remove("bolder")
+    }
+ }
+
+ window.addEventListener("scroll", veranderKleur3)
+
+
+
+
+
+var topPage = document.querySelector(".casestudy")
 var backToTopBtn = document.querySelector("#back-to-top")
 
 function backToTop() {
@@ -42,6 +129,7 @@ function veranderHeader() {
     header.classList.remove("background-header-project") 
   }
 }
+
 
 
 // terugknop

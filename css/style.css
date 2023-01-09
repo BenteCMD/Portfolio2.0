@@ -43,7 +43,7 @@
 
 
 @media(prefers-color-scheme: dark) {
-    :rootxs {
+    :root {
     --main-color: black;
     --main-color2: rgba(255, 255, 255, 0.6);
     --main-color3: #557091;
@@ -58,8 +58,9 @@
     --eye-clr: #557091;
     --naam: #6c8aaf;
     --wolk: rgb(130, 151, 164, 0.7);
-    --case-bg: linear-gradient(black, rgba(0,0,0, 0.8) 15%);
-    --case-overgang: linear-gradient(rgba(0, 0, 0, 0.6), rgb(0, 0, 0) 100%);
+    --bg-case: linear-gradient(rgba(0, 0, 0, 0.8), black 15%, black 70%, rgba(0, 0, 0, 0.8) 95%);
+    /* --case-bg: linear-gradient(black, rgba(0,0,0, 0.8) 15%);
+    --case-overgang: linear-gradient(rgba(0, 0, 0, 0.6), rgb(0, 0, 0) 100%); */
     --bg: url(../images/nightmode-bg.png);
     --bg2: url(../images/dark-bg2.svg);
     }
@@ -81,8 +82,9 @@
         --eye-clr: #89A575;
         --naam: #89A575;
         --wolk: rgba(255,255,255,0.8);
-        --case-bg: linear-gradient(white, rgba(255,255,255, 0.8) 15%);
-        --case-overgang: linear-gradient(rgba(255,255,255,0.8), white);
+        --bg-case: linear-gradient(rgba(255,255,255, 0.8), white 15%, white 70%, rgba(255,255,255, 0.8) 95%);
+        /* --case-bg: linear-gradient(white, rgba(255,255,255, 0.8) 15%);
+        --case-overgang: linear-gradient(rgba(255,255,255,0.8), white); */
         --bg: url(../images/bg-portfolio.svg);
         --bg2: url(../images/bg2.svg);
     
@@ -109,8 +111,9 @@
     --eye-clr: #89A575;
     --naam: #89A575;
     --wolk: rgba(255,255,255,0.8);
-    --case-bg: linear-gradient(white, rgba(255,255,255, 0.8) 15%);
-    --case-overgang: linear-gradient(rgba(255,255,255,0.8), white);
+    --bg-case: linear-gradient(rgba(255,255,255, 0.8), white 15%, white 70%, rgba(255,255,255, 0.8) 95%);
+    /* --case-bg: linear-gradient(white, rgba(255,255,255, 0.8) 15%);
+    --case-overgang: linear-gradient(rgba(255,255,255,0.8), white); */
     --bg: url(../images/bg-portfolio.svg);
     --bg2: url(../images/bg2.svg);
 
@@ -135,8 +138,9 @@
     --eye-clr: #557091;
     --naam: #6c8aaf;
     --wolk: rgb(130, 151, 164, 0.7);
-    --case-bg: linear-gradient(black, rgba(0,0,0, 0.8) 15%);
-    --case-overgang: linear-gradient(rgba(0, 0, 0, 0.6), rgb(0, 0, 0) 100%);
+    --bg-case: linear-gradient(rgba(0, 0, 0, 0.8), black 15%, black 70%, rgba(0, 0, 0, 0.8) 95%);
+    /* --case-bg: linear-gradient(black, rgba(0,0,0, 0.8) 15%);
+    --case-overgang: linear-gradient(rgba(0, 0, 0, 0.6), rgb(0, 0, 0) 100%); */
     --bg: url(../images/nightmode-bg.png);
     --bg2: url(../images/dark-bg2.svg);
 }
@@ -236,8 +240,8 @@ button {
 }
 
 .bolder {
-    font-family: "Satoshi Bold", "Futura", "sans-serif";
-    color:var(--btn-clr2);
+    font-family: "Satoshi Bold", "Futura", "sans-serif" !important;
+    color:var(--btn-clr2) !important;
 }
 
 .bolder2 {
@@ -984,18 +988,6 @@ h1 {
     }
 }
 
-#back {
-    border: none;
-    background: none;
-    box-shadow: none;
-    padding: 0;
-    opacity: 0%;
-    position: absolute;
-    color: var(--section-p);
-    top: 160px;
-    left: 120px;
-}
-
 #visual-info,
 #coding-info,
 #ux-info,
@@ -1260,11 +1252,6 @@ h1 {
 /* Case study */
 /**************/
 
-#titel-terugknop-container {
-    display: flex;
-    align-items: center;
-}
-
 #progressbar {
     --progress: 10px;
     width: var(--progress);
@@ -1272,70 +1259,6 @@ h1 {
     background-color: var(--main-color3);
     position: fixed;
     top: 81px;
-}
-
-#main-casestudy {
-    background-color:var(--section-clr);
-    width: calc(100% - 100px);
-    margin-inline: auto;
-    border-top-left-radius: 2em;
-    border-top-right-radius: 2em;
-    box-shadow: 3px 0 3px -4px var(--box-shadow), -3px 0 3px -4px var(--box-shadow);
-    padding-top: 2em;
-    padding-bottom: 4em;
-    padding-right: 11%;
-    padding-left: 11%;
-    margin-top: 5.5em;
-    transform: .2s;
-    max-height: fit-content;
-    scroll-margin: 10em;
-}
-
-#main-casestudy2 {
-    background-color: var(--main-color);
-    width: calc(100% - 100px);
-    margin-inline: auto;
-    box-shadow: 3px 0 3px -4px var(--box-shadow), -3px 0 3px -4px var(--box-shadow);
-    padding-top: 2em;
-
-    padding-right: 11%;
-    padding-left: 11%;
-    overflow-x: hidden;
-    transform: .2s;
-}
-
-.lower {
-    margin-top: -16em;
-}
-
-#main-casestudy3 {
-    background-image: var(--case-bg);
-    width: calc(100% - 100px);
-    margin-inline: auto;
-    box-shadow: 3px 0 3px -4px var(--box-shadow), -3px 0 3px -4px var(--box-shadow);
-    padding-top: 3em;
-    padding-bottom: 4em;
-    padding-right: 11%;
-    padding-left: 11%;
-    overflow-x: hidden;
-    transition: .2s;
-}
-
-#titel-terugknop {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: .5em;
-}
-
-#main-casestudy h2 {
-    font-size: 2rem;
-    margin-top: .5em;
-    color: var(--main-color2);
-}
-
-#project1 h2 {
-    min-width: 300px;
 }
 
 .terug-knop {
@@ -1350,6 +1273,14 @@ h1 {
     z-index: 12;
 }
 
+.terug-knop:focus {
+    outline: none;
+}
+
+.terug-knop:focus-visible {
+    transform: scale(1.1);
+}
+
 #back-arrow {
     width: 1.1em;
     rotate: 90deg;
@@ -1357,7 +1288,65 @@ h1 {
     transition: .1s;
 }
 
-#project-info {
+.casestudy {
+    background-image: var(--bg-case);
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    box-shadow: 3px 0 3px -4px var(--box-shadow), -3px 0 3px -4px var(--box-shadow);
+
+    padding-top: 3.5em;
+    padding-bottom: 4em;
+    padding-right: 11%;
+    padding-left: 11%;
+    margin-top: 5.5em;
+    scroll-margin: 100px;
+
+    width: calc(100% - 100px);
+    margin-inline: auto;
+    max-height: fit-content;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media(max-width: 700px) {
+    .casestudy {
+        width: 93%;
+    }
+}
+
+.casestudy section {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.casestudy h2 {
+    text-align: center;
+}
+
+.casestudy h3 {
+    font-size: 1.7rem;
+    font-family: var(--kopjes-font-h2);
+    color: var(--naam);
+    margin-bottom: .5em;
+}
+
+.casestudy h4  {
+    font-size: 1.2rem;
+    font-family: var(--kopjes-font-h2);
+    color:var(--main-color2);
+    margin-top: 1em;
+}
+
+.casestudy p {
+    min-width: 20em;
+    max-width: 30em;
+    line-height: 1.7rem;
+    margin-bottom: .5em;
+}
+
+.project-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
     list-style: none;
@@ -1367,19 +1356,20 @@ h1 {
     padding: 1em;
     margin-bottom: 2em;
     justify-content:space-evenly;
+    min-width: 100%;
     scroll-margin: 120px;
 }
 
 @media (max-width: 680px) {
-    #project-info li {
+    .project-info li {
         margin-bottom: 1.5em;
     }
 
-    #project-info li:last-of-type {
+    .project-info li:last-of-type {
         margin-bottom: 0em;
     }
 
-    #project-info {
+    .project-info {
         flex-direction: column;
     }
 }
@@ -1392,6 +1382,46 @@ h1 {
     margin-bottom: .5em;
 }
 
+.nav-project {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 13%;
+    list-style: none;
+    width: 100%;
+    height: fit-content;
+    padding: .3em;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    position: sticky;
+    top: 5.35em;
+    z-index: 15;
+}
+
+.nav-project button {
+    font-family: var(--links-font);
+    color: var(--section-p);
+    box-shadow: none;
+}
+
+.nav-project button:hover,
+.nav-project button:focus {
+    font-weight: bolder;
+    transform: scale(1.1);
+}
+
+#opdracht,
+#proces,
+#resultaat {
+    scroll-margin: 160px;
+}
+
+.project-banner {
+    min-width: 630px;
+    flex-wrap: nowrap;
+    margin-top: 1em;
+}
+
 #img-container {
     display: flex;
     flex-wrap: nowrap;
@@ -1401,96 +1431,139 @@ h1 {
     height: 100%;
 }
 
-.storyboard {
-    min-width: 630px;
-    flex-wrap: nowrap;
-    margin-top: 1em;
-}
-
-#arrow {
+.pijl {
     width: 2em;
     margin: 2em;
     cursor: pointer;
     transition: .1s;
 }
 
-#arrow-container {
-    width: max-content;
-    margin-inline: auto;
-}
-
-#arrow:hover,
-#arrow:focus-visible {
+.pijl:hover,
+.pijl:focus-visible {
     transform: scale(1.1);
 }
 
-#arrow:focus {
+.pijl:focus,
+.pijl:focus {
     outline: none;
 }
 
-#section-flex {
-    display: flex;
-    gap: 3em;
-    margin-top: 3em;
+.overgang-sections {
+    min-width: 28em;
+    margin-top: 6em;
+    margin-top: 250px;
 }
 
-@media(max-width: 1050px ) {
-    #section-flex {
-        flex-direction: column;
-        gap: 0em;
-    }
+.omhoog {
+    transform: translateY(-250px)  !important;
+    transition: .5s;
 }
 
-#main-casestudy section,
-#main-casestudy2 section,
-#main-casestudy3 section {
-    margin-bottom: 3em;
-}
-
-#main-casestudy2 section {
-    margin-top: 4em;
-}
-
-#main-casestudy2 section:first-of-type h5 {
-    margin-top: 2em;
-}
-
-#main-casestudy section img {
-    width: 35em;
-}
-
-#main-casestudy2 section img {
-    width: 30em;
+#back-to-top {
+    box-shadow: none;
+    color: var(--section-p);
 }
 
 .centreren {
     width: fit-content;
     margin-inline: auto;
-    /* margin-top: 1em; */
+}
+
+
+/**********/
+/*  rmdd  */
+/**********/
+
+#project1 h2 {
+    min-width: 300px;
+}
+
+.article-flex {
+    display: flex;
+    gap: 3em;
+}
+
+@media(max-width: 1050px ) {
+    .article-flex {
+        flex-direction: column;
+        gap: 2em;
+    }
+}
+
+#project1 #proces {
+    margin-top: -5em;
+}
+
+#reflectie {
+    display: flex;
+    gap: 9em;
+    align-items: center;
+}
+
+#reflectie img {
+    width: 15em;
+    object-fit: contain;
+}
+
+@media(max-width: 1200px) {
+    #reflectie {
+        flex-direction: column;
+        gap: 3em;
+        align-items: center;
+    }
 }
 
 .verwijzingen {
     color: #548cb5;
 }
 
-#user-scenario {
-    scroll-margin: 100px;
-}
-
-#context-map {
-    scroll-margin: 100px;
-}
-
-#url {
-    scroll-margin: 100px;
-}
-
-#wireflow {
-    scroll-margin: 100px;
-}
-
+#user-scenario,
+#context-map,
+#url,
+#wireflow,
 #screenflow {
     scroll-margin: 100px;
+    margin-top: 1em;
+}
+
+#user-scenario {
+    margin-top: 3em;
+}
+
+@media(max-width: 1000px) {
+    #user-scenario {
+        width: fit-content;
+        margin-inline: auto;
+    }
+}
+
+#context-map img,
+#url img {
+    margin-top: 2em;
+    width: 40em;
+}
+
+#wireflow img {
+    min-width: 50em;
+}
+
+#screenflow img,
+#wireflow img {
+    margin-top: .5em;
+}
+
+@media (max-width: 1000px) {
+    #wireflow img {
+        min-width: 40em;
+        transition: .5s;
+    }
+}
+
+@media (max-width: 870px) {
+    #wireflow img {
+        min-width: 0em;
+        transition: .5s;
+    }
 }
 
 #user-scenario-p {
@@ -1511,126 +1584,6 @@ h1 {
     }
 }
 
-#mockup-fridge {
-    width: calc(100% - 100px);
-    margin-inline: auto;
-    margin-top: 250px;
-}
-
-
-.omhoog {
-    transform: translateY(-250px)  !important;
-    transition: .5s;
-}
-
-.wireflow {
-    min-width: 50em;
-}
-
-@media (max-width: 1000px) {
-    .wireflow {
-        min-width: 40em;
-        transition: .5s;
-    }
-}
-
-@media (max-width: 870px) {
-    .wireflow {
-        min-width: 0em;
-        transition: .5s;
-    }
-}
-
-#main-casestudy h4,
-#main-casestudy2 h4,
-#main-casestudy3 h4  {
-    font-size: 1.7rem;
-    font-family: var(--kopjes-font-h2);
-    color: var(--naam);
-    margin-bottom: .5em;
-}
-
-#main-casestudy h5,
-#main-casestudy2 h5,
-#main-casestudy3 h5  {
-    font-size: 1.2rem;
-    font-family: var(--kopjes-font-h2);
-    color:var(--main-color2);
-    margin-top: 1em;
-    margin-bottom: .3em;
-}
-
-#main-casestudy section p,
-#main-casestudy2 section p,
-#main-casestudy3 section p {
-    max-width: 30em;
-    line-height: 1.7rem;
-    margin-bottom: .5em;
-}
-
-#mockup-xxxplore {
-    overflow-x: scroll;
-    height: 100%; 
-    width: calc(100% - 100px);
-    margin-inline: auto;
-    margin-bottom: -1em;
-    margin-top: -1em;
-}
-
-#overgang-menu {
-    height: 100%; 
-    width: calc(100% - 100px);
-    margin-inline: auto;
-    margin-bottom: -1em;
-}
-
-#overgang {
-    background-image: var(--case-overgang);
-    width: calc(100% - 100px);
-    margin-inline: auto;
-    height: 30px;
-}
-
-@media(max-width: 700px) {
-    #main-casestudy,
-    #main-casestudy2,
-    #main-casestudy3,
-    #mockup-fridge,
-    #mockup-xxxplore,
-    #overgang,
-    #overgang-menu {
-        width: 93%;
-    }
-}
-
-#main-casestudy3 section:last-of-type {
-    display: flex;
-    gap: 9em;
-    align-items: center;
-}
-
-#main-casestudy3 section:last-of-type img {
-    width: 15em;
-    object-fit: contain;
-}
-
-@media(max-width: 1200px) {
-    #main-casestudy3 section:last-of-type {
-        flex-direction: column;
-        gap: 3em;
-        align-items: center;
-    }
-}
-
-#tastylogo {
-    width: 14em;
-}
-
-#back-to-top {
-    box-shadow: none;
-    color: var(--section-p);
-}
-
 
 /***********/
 /* xxxplore */
@@ -1641,16 +1594,6 @@ h1 {
     margin-top: 2em;
 }
 
-#img-container-xxxplore {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    width: 100%;
-    height: 100%;
-}
-
 #xxx-mock {
     min-width: 630px;
     flex-wrap: nowrap;
@@ -1658,26 +1601,26 @@ h1 {
 }
 
 video {
-    /* object-fit: scale-down; */
-    /* width: 620px;
-    height: 400px; */
     max-width: 100%;
 	margin-bottom: 1em;
-	/* min-height: 400px; */
 	object-fit: cover;
+    margin-top: 1em;
 }
 
 #prototype {
     scroll-margin: 100px;
 }
 
-.text-align-left { 
+/* .text-align-left { 
     text-align: left;
+} */
+
+#mockup-xxxplore {
+    width: 30em;
 }
 
 #flex-prototype {
     display: flex;
-    align-items: center;
     gap: 3em;
 }
 
@@ -1702,19 +1645,23 @@ video {
     display: flex;
     gap: 3em;
     align-items: center;
-    margin-top: 12em;
-    margin-bottom: 10em;
+    scroll-margin: 100px;
 }
 
 #proces-cc {
     display: flex;
     gap: 3em;
     align-items: center;
+    scroll-margin: 100px;
+    padding-bottom: 14%;
 }
 
-#opdracht-cc {
-    margin-top: 4em;
-    margin-bottom: -5em;
+#cc-mock {
+    width: 32em;
+}
+
+#logo-cc {
+    width: 28em;
 }
 
 @media (max-width: 1250px) {
@@ -1828,6 +1775,11 @@ video {
     max-width: 20em;
 }
 
+#iconen-menu,
+#logo-menu {
+    width: 28em;
+}
+
 .menukaarten {
     max-width: 15em;
 }
@@ -1843,7 +1795,11 @@ video {
     align-items: center;
 }
 
-h6 {
+#verslag-sh {
+    width: 30em;
+}
+
+h5 {
     font-size: 1rem;
     margin-bottom: .3em;
 }
@@ -1857,6 +1813,15 @@ h6 {
     margin-top: 2em;
 }
 
+#wordmap,
+#wordmap2 {
+    width: 30em;
+}
+
+#ideation {
+    width: 35em;
+}
+
 .text-align-center {
     text-align: center;
 }
@@ -1866,12 +1831,19 @@ h6 {
     gap: 3em;
 }
 
+@media(max-width: 1250px) {
+    #img-flex {
+        flex-direction: column;
+        gap: 2em;
+    }
+}
+
 #proto-skate {
     max-width: 7em;
 }
 
 #dr-skate {
-    min-width: 47em;
+    min-width: 45em;
 }
 
 @media(max-width:1000px) {
