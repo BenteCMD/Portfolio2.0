@@ -48,9 +48,6 @@ function openPortfolio() {
 }, 1500)
 
   navAbout.classList.add("bolder")
-  codingInfo.classList.add("coding-info-animation")
-  visualInfo.classList.add("visual-info-animation")
-  uxInfo.classList.add("ux-info-animation")
 }
 
 ctaBtn.addEventListener("click", openPortfolio)
@@ -78,14 +75,31 @@ function backTolanding() {
     clouds.style.display="block"
       }, 1350)
   aboutSection.style.display="none"
-  codingInfo.classList.remove("coding-info-animation")
-  visualInfo.classList.remove("visual-info-animation")
-  uxInfo.classList.remove("ux-info-animation")
   navAbout.classList.remove("bolder")
 }
 
 logo.addEventListener("click", backTolanding)
 // window.addEventListener("scroll", backTolanding)
+
+
+
+
+//bg zoomed in maar toch responsive - quick fix
+
+
+function changeBg() {
+
+    bg.classList.add("bg-change")
+}
+
+ctaBtn.addEventListener("click", changeBg)
+
+
+function changeBgBack() {
+  bg.classList.remove("bg-change")
+}
+
+logo.addEventListener("click", changeBgBack)
 
 
 
@@ -153,8 +167,6 @@ function backToAbout() {
   }
 
 back.addEventListener("click", backToAbout)
-
-
 
 
 
@@ -234,10 +246,6 @@ darkModeToggle.addEventListener("click", () => {
         }, 100)
     }
 })
-
-
-
-
 
 
 

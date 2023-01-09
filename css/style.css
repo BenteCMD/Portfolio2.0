@@ -171,6 +171,13 @@ body {
     max-height: 100vh;
 }
 
+@media(max-width: 400px) {
+    .bg-change {
+        bottom: 100px !important;
+        right: 150px !important;
+    }
+}
+
 #bg2 {
     position: fixed;
     top: 0;
@@ -274,7 +281,7 @@ button {
 
 #body-landing {
     overflow-y: hidden;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 header nav ul {
@@ -1024,7 +1031,7 @@ h1 {
 
 @media (max-width: 1200px) {
     #info-div {
-        margin-top: 2em;
+        margin-top: 3em;
     }
 }
 
