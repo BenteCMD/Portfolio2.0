@@ -174,7 +174,7 @@ body {
 @media(max-width: 400px) {
     .bg-change {
         bottom: 100px !important;
-        right: 150px !important;
+        right: 125px !important;
     }
 }
 
