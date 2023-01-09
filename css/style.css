@@ -1307,8 +1307,6 @@ h1 {
     animation-delay: 1000ms;
 }
 
-
-
 /**************/
 /* Case study */
 /**************/
@@ -1625,7 +1623,7 @@ h1 {
 
 #context-map img,
 #url img {
-    margin-top: 2em;
+    margin-top: .5em;
     width: 40em;
 }
 
@@ -1651,6 +1649,23 @@ h1 {
         transition: .5s;
     }
 }
+
+
+@media (max-width: 400px) {
+    #wireflow img,
+    #screenflow-img,
+    #url img,
+    #context-map img {
+        max-width: 18em;
+        min-width: 18em;
+        transition: .5s;
+    }
+
+    #user-scenario {
+        padding-left: 2em;
+    }
+}
+
 
 #user-scenario-p {
     display: grid;
@@ -1696,10 +1711,6 @@ video {
 #prototype {
     scroll-margin: 100px;
 }
-
-/* .text-align-left { 
-    text-align: left;
-} */
 
 #mockup-xxxplore {
     width: 30em;
@@ -1834,6 +1845,10 @@ video {
     text-align: center;
 }
 
+#overgang-menu img {
+    min-width: 21em;
+}
+
 .stijl-flex {
     display: flex;
     flex-wrap: wrap;
@@ -1842,6 +1857,16 @@ video {
     align-items: center;
     margin-bottom: 4em;
     margin-top: 2em;
+}
+
+@media(max-width: 400px) {
+    .stijl-flex ul {
+        padding-left: 2em;
+    }
+
+    .inspo-flex {
+        display: flex;
+    }
 }
 
 .schetsen-flex {
@@ -1883,6 +1908,17 @@ video {
 
 #verslag-sh {
     width: 30em;
+}
+
+@media(max-width: 400px) {
+    #verslag-sh,
+    #stijl,
+    .schetsen,
+    .schetsen2,
+    #iconen-menu,
+    #logo-menu {
+        max-width: 18em;
+    }
 }
 
 h5 {
