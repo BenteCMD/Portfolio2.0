@@ -156,7 +156,7 @@ var terugknop = document.querySelector("#titel-terugknop")
 
 function naarBeneden() {
     if (window.scrollY >= scrollTrigger2 || window.pageYOffset >= scrollTrigger2) {
-        terugknop.style.transform = "translateY(-45px)"
+        terugknop.style.transform = "translateY(5px)"
     } else {
         terugknop.style.transform = "translateY(0px)"
     }
@@ -236,32 +236,3 @@ darkModeToggle.addEventListener("click", () => {
     }
 
 })
-
-
-// nav
-
-// var scrollTrigger3= 300
-// var scrollTrigger4 = 700
-// var scrollTrigger5 = 1000
-
-// var opdracht = document.querySelector("#opdracht-a")
-// var proces = document.querySelector("#proces-a")
-// var resultaat = document.querySelector("#resultaat-a")
-
-// function veranderKleur() {
-
-//     if (window.scrollY >= scrollTrigger3 || window.pageYOffset >= scrollTrigger3) {
-//         opdracht.classList.add("bolder")
-//     }
-
-//     if (window.scrollY >= scrollTrigger4 || window.pageYOffset >= scrollTrigger4) {
-//         proces.classList.add("bolder")
-//     }
-
-//     if (window.scrollY >= scrollTrigger5|| window.pageYOffset >= scrollTrigger5) {
-//         resultaat.classList.add("bolder")
-//     }
-
-// }
-
-// window.addEventListener("scroll", veranderKleur)

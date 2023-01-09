@@ -139,7 +139,7 @@ var terugknop = document.querySelector("#titel-terugknop")
 
 function naarBeneden() {
     if (window.scrollY >= scrollTrigger2 || window.pageYOffset >= scrollTrigger2) { 
-        terugknop.style.transform = "translateY(-45px)"
+        terugknop.style.transform = "translateY(5px)"
     } else {
         terugknop.style.transform = "translateY(0px)"
     }
