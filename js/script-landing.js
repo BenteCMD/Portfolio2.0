@@ -86,21 +86,19 @@ logo.addEventListener("click", backTolanding)
 
 //bg zoomed in maar toch responsive - quick fix
 
+// function changeBg() {
 
-function changeBg() {
+//     bg.classList.add("bg-change")
+// }
 
-    bg.classList.add("bg-change")
-}
-
-ctaBtn.addEventListener("click", changeBg)
+// ctaBtn.addEventListener("click", changeBg)
 
 
-function changeBgBack() {
-  bg.classList.remove("bg-change")
-}
+// function changeBgBack() {
+//   bg.classList.remove("bg-change")
+// }
 
-logo.addEventListener("click", changeBgBack)
-
+// logo.addEventListener("click", changeBgBack)
 
 
 //skillsdiagram show
@@ -184,7 +182,7 @@ var sunset = document.querySelector("#sunset")
 
 const enableDarkMode = () => {
     document.documentElement.classList.add("dark-mode")
-    skillsCirkel.src="images/skillsdiagram-dark.svg"
+    skillsCirkel.src="images/skillsdiagram-dark.png"
     visualPart.src="images/visual-dark.svg"
     codePart.src="images/code-dark.svg"
     uxPart.src="images/ux-dark.svg"
@@ -201,7 +199,7 @@ const enableDarkMode = () => {
 
 const disableDarkMode = () => {
     document.documentElement.classList.remove("dark-mode")
-    skillsCirkel.src="images/skills.svg"
+    skillsCirkel.src="images/skills.png"
     visualPart.src="images/visual.svg"
     codePart.src="images/coding.svg"
     uxPart.src="images/ux.svg"

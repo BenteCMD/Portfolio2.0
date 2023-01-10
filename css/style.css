@@ -156,8 +156,16 @@ body {
     min-height: 100vh;
 }
 
+#body-landing {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 #bg {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
@@ -168,14 +176,7 @@ body {
     background-position: center;
     transition: 2s;
     z-index: -1;
-    max-height: 100vh;
-}
-
-@media(max-width: 400px) {
-    .bg-change {
-        bottom: 100px !important;
-        right: 143px !important;
-    }
+    min-height: 100vh;
 }
 
 #bg2 {
@@ -278,11 +279,6 @@ button {
 /********************/
 /*   Landing page   */
 /********************/
-
-#body-landing {
-    overflow-y: hidden;
-    overflow-x: hidden !important;
-}
 
 header nav ul {
     list-style: none;
@@ -454,7 +450,7 @@ header button.open .line:nth-child(3) {
     width: 5em;
     height: 2em;
     position: absolute;
-    top: 1.5em;
+    top: 24%;
     left: 8em;
 }
 
@@ -514,7 +510,7 @@ h1 {
     justify-content:flex-end;
     padding: 2.5em; */
     position: absolute;
-    top: 35em;
+    top: 88%;
     left: 2.5em;
     color: var(--home-h2);
     min-width: 280px;
@@ -591,12 +587,28 @@ h1 {
     outline: none;
 }
 
+#cloud-container {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+}
+
 #clouds { 
     position: absolute;
-    top: 13em;
-    left: 6.5em;
+    top: 32%;
+    left: 5%;
+    transform: translate(-50%, -50%);
     animation: upDown 4s infinite cubic-bezier(.32,.15,.84,.75);
     transition: .3s;
+}
+
+@media (min-width: 1700px) {
+    #clouds {
+        top: 50%;
+        left: 20%;
+    }
 }
 
 @keyframes upDown {
@@ -616,10 +628,17 @@ h1 {
 #moi {
     width: 13.5em;
     position: absolute;
-    left: 42%;
-    top: 32.5%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     transition: .5s;
     cursor: pointer;
+}
+
+@media (min-width: 1600px) {
+    #moi {
+        top: 55%;
+    }
 }
 
 @media (min-width: 1350px) {
@@ -630,16 +649,11 @@ h1 {
 }
 
 #moi:hover {
-    transform: translateY(-20%);
+    top: 43%;
     transition: .5s;
 }
 
-@media (max-width: 1200px) { /*Misschien toch maar geen los plaatje doen..?*/
-    #moi {
-        left: 43%;
-        transition: .2s;
-    }
-
+@media (max-width: 1200px) { 
     #clouds {
         width: 1300px;
         right: 18em;
@@ -648,10 +662,6 @@ h1 {
 }
 
 @media (max-width: 1050px) {
-    #moi {
-        left: 40%;
-        transition: .2s;
-    }
 
     #clouds {
         right: 15em;
@@ -660,10 +670,6 @@ h1 {
 }
 
 @media (max-width: 900px) {
-    #moi {
-        left: 38%;
-        transition: .2s;
-    }
 
     #clouds {
         right: 20em;
@@ -671,43 +677,17 @@ h1 {
     }
 }
 
-@media (max-width: 800px) {
-    #moi {
-        left: 36%;
-        transition: .2s;
-    }
-}
-
-@media (max-width: 700px) {
-    #moi {
-        left: 34%;
-        transition: .2s;
-    }
-}
-
-@media (max-width: 600px) {
-    #moi {
-        left: 31%;
-        transition: .2s;
-    }
-}
-
-@media (max-width: 500px) {
-    #moi {
-        left: 30%;
-        transition: .2s;
-    }
-}
-
-@media (max-width: 400px) {
-    #moi {
-        left: 24%;
-        transition: .2s;
-    }
-}
 
 .eyes {
     transition: 1s;
+}
+
+@media(min-width: 1600px) {
+    .eyes {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    }
 }
 
 .eye {
@@ -842,8 +822,26 @@ h1 {
     margin-top: 3em;
 
     display: flex;
+    justify-content: center;
     flex-direction: row;
     gap: 3em;
+}
+
+@media (min-width: 1800px) {
+    #about-section {
+        width: 45%;
+    }
+}
+
+#about-container {
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width: 1250px) {
+    #about-container {
+        flex-direction: column;
+    }
 }
 
 #hide {
@@ -1195,6 +1193,37 @@ h1 {
     }
 }
 
+
+@media(min-width: 1800px) {
+    #main-about {
+        margin-top: 18em;
+    }
+
+    #hide {
+        margin-top: 15em;
+    }
+
+    #ik {
+        width: 450px;
+        height: 850px;
+        right: 20em;
+        top: 22em;
+    }
+
+    #body-landing #ik {
+        top: 7em;
+    }
+
+    #back2 {
+        left: 23em;
+    }
+
+    #back {
+        top: 25em;
+        left: 20em;
+    }
+}
+
 /*************/
 /* Projecten */
 /*************/
@@ -1208,6 +1237,12 @@ h1 {
     bottom: 0;
     margin-top: 4.3em;
     transition: .2s;
+}
+
+@media(min-width: 1800px) {
+    #project-section {
+        margin-top: 15em;
+    }
 }
 
 #project-section h2 {
@@ -1235,7 +1270,8 @@ h1 {
     gap: 2.5em;
     list-style: none;
     width: 90%;
-    /* margin-inline: left; */
+    max-width: 1000px;
+    margin-inline: auto;
     margin-top: 1em;
 }
 
@@ -1788,6 +1824,8 @@ video {
     margin-top: 6em;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    max-width: 800px;
+    margin-inline: auto;
 }
 
 .cc-img {
@@ -2013,6 +2051,13 @@ h5 {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    width: fit-content;
+}
+
+@media(min-width: 1800px) {
+    #main-contact {
+        margin-top: 20em;
+    }
 }
 
 #contact-h2 {
