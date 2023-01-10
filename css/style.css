@@ -827,7 +827,7 @@ h1 {
     gap: 3em;
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 1700px) {
     #about-section {
         width: 45%;
     }
@@ -1194,7 +1194,7 @@ h1 {
 }
 
 
-@media(min-width: 1800px) {
+@media(min-width: 1700px) {
     #main-about {
         margin-top: 18em;
     }
@@ -1239,7 +1239,7 @@ h1 {
     transition: .2s;
 }
 
-@media(min-width: 1800px) {
+@media(min-width: 1600px) {
     #project-section {
         margin-top: 15em;
     }
