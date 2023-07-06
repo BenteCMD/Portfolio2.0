@@ -1406,15 +1406,19 @@ h1 {
 
 }
 
+.casestudy section {
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+
 @media(max-width: 700px) {
     .casestudy {
         width: 93%;
     }
-}
-
-.casestudy section {
-    margin-top: 5em;
-    margin-bottom: 5em;
+    .casestudy section {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
 }
 
 .casestudy h2 {
@@ -1886,6 +1890,10 @@ video {
     min-width: 21em;
 }
 
+#overgang-menu-potlood img {
+    min-width: 100vw;
+}
+
 .stijl-flex {
     display: flex;
     flex-wrap: wrap;
@@ -2207,5 +2215,107 @@ form button {
 
 
 
+/********************/
+/* Inclusive Design */
+/********************/
 
+#onderzoek {
+    max-width: 18em;
+}
+
+#schetsen-sectie, #inspo-sectie {
+    margin-top: 4em;
+}
+
+#campagneposter {
+    max-width: 18em;
+}
+
+#campagneposter-sectie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin-bottom: 4em;
+}
+
+#kennisquiz {
+    max-width: 22em;
+}
+
+@media (max-width: 400px) {
+    #kennisquiz {
+        max-width: 18em;
+    }
+}
+
+.banner {
+    margin-top:2em;
+}
+
+.webdesign {
+    max-width: 35em;
+}
+
+.webdesign-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4em;
+    gap: 1em;
+    margin-top: 8em;
+}
+
+.webdesign-section:first-of-type {
+    margin-top: 2em;
+}
+
+.webdesign-section:nth-of-type(2n) div {
+    order: 2;
+}
+
+@media (max-width: 1100px) {
+    .webdesign-section {
+        flex-wrap: wrap;
+        gap: 2em;
+        margin-top: 6em;
+    }
+
+    .webdesign-section:first-of-type {
+        margin-top: 2em;
+    }
+
+    .webdesign {
+        max-width: 20em;
+    }
+
+    .webdesign-section:nth-of-type(2n) div {
+        order: 0;
+    }
+}
+
+#download-p {
+    margin-top: 2em;
+}
+
+#pdf-link {
+        background-color: var(--btn-bg);
+        color: var(--btn-clr2);
+        border-radius: 50px;
+        width: fit-content;
+        height: fit-content;
+        padding: 1em;
+        text-transform: uppercase;
+        font-family: var(--kopjes-font);
+        border: none;
+        text-decoration: none;
+        box-shadow: 2px 2px 2px var(--box-shadow);
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 1em;
+        margin-top: 1em;
+    }
 
