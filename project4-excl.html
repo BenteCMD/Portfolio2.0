@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bente van der Zeijden - Web design</title>
+    <title>Bente van der Zeijden - Menukaart</title>
     <link href="css/style.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
 </head>
@@ -21,7 +21,6 @@
             <span class="line"></span>
             <span class="line"></span>
         </button>
-
 
         <a href="index.html"><svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.59 50.72">
                 <defs>
@@ -100,11 +99,11 @@
             </svg>
         </a>
 
-        <h2>Website design</h2>
+        <h2>Menukaart onepage</h2>
 
         <!-- Banner-->
         <div class="centreren">
-            <img class="banner" src="images/webdesign-banner.png" alt="banner webdesign">
+            <img id="banner-menu" src="images/menus.png" alt="ontworpen menukaarten">
         </div>
 
         <!-- CTA pijl -->
@@ -130,21 +129,26 @@
         <ul class="project-info">
             <li>
                 <p class="proj-heading">Vak</p>
-                <p>Stage</p>
+                <p>Blok Web, jaar 2</p>
             </li>
             <li>
                 <p class="proj-heading">Rol</p>
-                <p>Webdesigner</p>
+                <p>UX/UI Designer</p>
             </li>
             <li>
                 <p class="proj-heading">Duur</p>
-                <p>2 weken</p>
+                <p>3 weken</p>
             </li>
             <li>
                 <p class="proj-heading">Tools</p>
                 <p>Figma, Adobe Illustrator</p>
             </li>
+            <li>
+                <p class="proj-heading">Cijfer</p>
+                <p>9.5</p>
+            </li>
         </ul>
+
 
         <!-- Navigatie project -->
         <ul class="nav-project">
@@ -161,95 +165,145 @@
 
 
         <!-- De opdracht -->
-        <div class="article-flex">
-            <section id="opdracht">
-                <h3>De opdracht</h3>
-                <p>Gedurende mijn stage periode bij de full-service digital agency Baas & Baas, heb ik meerdere webdesigns gemaakt voor klanten. Deze klanten kwamen uit diverse sectoren, waaronder mode, watersport, vastgoed, wijn en gezondheid. 
-                    Het was een boeiend om mezelf telkens opnieuw te verdiepen in nieuwe onderwerpen. Hieronder zie je enkele voorbeelden van mijn creaties.
-                </p>
-            </section>
+        <section class="centreren" id="opdracht">
+            <h3 id="title-center">De opdracht</h3>
+            <p>De opdracht was om een single page website vorm te geven voor een restaurant met jouw naam. Ik
+                kreeg de Nederlandse vormgever Sjoerd H. de Roos toegewezen van wie ik de visuele stijl moest
+                onderzoeken om het vervolgens als uitgangspunt voor de vormgeving te gebruiken.
+            </p>
+        </section>
+
+        <!-- Overgang sections -->
+        <div id="overgang-menu">
+            <img id="menuovergang" src="images/menuovergang.png" alt="decoratie">
+        </div>
 
         <!-- Het proces -->
         <section id="proces">
-            <div class="centreren">
+            <div id="proces-menu">
                 <h3>Het proces</h3>
-                <p>
-                    Bij elk project heb ik het ontwerpproces doorlopen: begrijpen en kaderen > conceptualiseren > verbeelden en maken > evalueren > itereren.
-                    Ik haal mijn inspiratie uit het begrijpen van de behoefte van de klant.
-                    De behoefte van de klant vatte ik samen in een aantal sleutelwoorden. Deze sleutelwoorden linkte ik vervolgens aan visuele kenmerken. Bijvoorbeeld: vriendelijk -> ronde vormen. Door vervolgens inspiratie te zoeken en verschillende inspirerende elementen te combineren, kwam ik op een concept uit. Dit werkte goed. Per ontwerp heb ik veel variaties gemaakt en deze steeds teruggekoppeld aan collega's en de klant.
-                </p>
+                <h4>Stijlonderzoek</h4>
+                <p>Ik begon met het onderzoeken van de stijl van SH de Roos.</p>
+                <img id="verslag-sh" src="images/research verslag SH de Roos-1.png" alt="onderzoeksverslag SH de Roos">
+
+                <div class="stijl-flex">
+                    <img id="stijl" src="images/stijl-deroos.png" alt="werken van SH de Roos">
+                    <ul>
+                        <li>
+                            <p>Strakke geometrische vormen met dubbele lijnen</p>
+                        </li>
+                        <li>
+                            <p>Vaak sobere belettering</p>
+                        </li>
+                        <li>
+                            <p>Veel subtiele en gedetailleerde versieringen</p>
+                        </li>
+                        <li>
+                            <p>Repetitieve patronen</p>
+                        </li>
+                        <li>
+                            <p>Doffe aardse kleuren. Maximaal drie verschillende kleuren</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="centreren">
+                <h4>Schetsen</h4>
+                <p>Daarna ben ik verschillende variaties van de iconen, het beeldmerk en vervolgens de gehele
+                    webpage gaan schetsen en uitwerken.</p>
+            </div>
+            <div class="schetsen-flex">
+                <img class="schetsen" src="images/schetsen6.png" id="schetsen iconen">
+                <img class="schetsen" src="images/schetsen5.png" id="schetsen iconen">
+                <img id="iconen-menu" src="images/iconsicons-vrm.svg" alt="iconen menu">
+            </div>
+            <div class="schetsen-flex">
+                <img class="schetsen" src="images/schetsen1.png" id="schetsen logo">
+                <img id="logo-menu" src="images/logo-vrm.png" alt="logo menu">
+            </div>
+            <div class="schetsen-flex">
+                <img class="schetsen2" src="images/schetsen2.png" id="schetsen onepage">
+                <img class="schetsen2" src="images/schetsen3.png" id="schetsen onepage">
+                <img class="schetsen2" src="images/schetsen4.png" id="schetsen onepage">
             </div>
         </section>
-    </div>
+
+        <!-- Het resultaat -->
         <section id="resultaat">
+
             <div class="centreren">
-                <h3>Resultaat</h3>
-                <div class="webdesign-section">
-                    <div>
-                        <h4>Swan and the People</h4>
-                        <p> <span class="bolder">Doelgroep:</span> zwangere vrouwen die zich zowel comfortabel als mooi willen voelen. </p>
-                        <p> <span class="bolder">Keywords:</span> modern, serieus, vrouwelijk, scandinavisch, minimalistisch, holistisch</p>
-                        <p id="download-p">Download de PDF om het gehele ontwerp te zien.</p>
-                        <a id="pdf-link" href="files/webdesign_swanandthepeople.pdf" download>
-                            Download PDF</a>
-                    </div>
-                    <img class="webdesign" src="images/swan-mock.png" alt="web design zwangerschapskleding">
-                </div>
-                <div class="webdesign-section">
-                    <div>
-                        <h4>Propvy Global</h4>
-                        <p> <span class="bolder">Doelgroep:</span> Investeerders in NL en België (27-68 jaar). Modaal en bovenmodaal, huizenbezitters, vakantiewoning geïnteresseerden, pensionada's.</p>
-                        <p> <span class="bolder">Keywords:</span> vriendelijk, uitnodigend, luxe, betrouwbaar, fris</p>
-                        <p id="download-p">Download de PDF om het gehele ontwerp te zien.</p>
-                        <a id="pdf-link" href="files/webdesign_propvyglobal.pdf" download>
-                            Download PDF</a>
-                    </div>
-                    <img class="webdesign" src="images/propvy-mock.png" alt="web design vastgoedbedrijf Dubai">
-                </div>
-                <div class="webdesign-section">
-                    <div>
-                        <h4>Damaro Wines</h4>
-                        <p> <span class="bolder">Doelgroep:</span> HORECA, Winebars, slijterijen en particulieren.</p>
-                        <p> <span class="bolder">Keywords:</span>  uitnodigend, aantrekkelijk, beschrijvend, verrassend</p>
-                        <p id="download-p">Download de PDF om het gehele ontwerp te zien.</p>
-                        <a id="pdf-link" href="files/webdesign_damaro.pdf" download>
-                            Download PDF</a>
-                    </div>
-                    <img class="webdesign" src="images/damaro-mock.png" alt="web design wijnhandel">
-                </div>
-                <div class="webdesign-section">
-                    <div>
-                        <h4>Sup Sup Club</h4>
-                        <p> <span class="bolder">Doelgroep:</span> Vrouwen 25-35.</p>
-                        <p> <span class="bolder">Keywords:</span> strak, modern, vriendelijk, speelse accenten </p>
-                        <p id="download-p">Download de PDF om het gehele ontwerp te zien.</p>
-                        <a id="pdf-link" href="files/webdesign_supsupclub.pdf" download>
-                            Download PDF</a>
-                    </div>
-                    <img class="webdesign" src="images/supsup-mock.png" alt="web design watersport">
-                </div>
-            
-                
+                <h3>Het resultaat</h3>
+                <h4 id="prototype">Menukaart onepage</h4>
+                <p>Het resultaat zijn drie verschillende versies van dezelfde singlepage menukaart gebaseerd op de
+                    stijl van SH de Roos.</p>
             </div>
+            <div id="menukaarten-container">
+                <div class="stijl-flex">
+                    <div>
+                        <h4>Versie 1</h4>
+                            <img class="menukaarten" src="images/menukaart1.png" alt="menukaart">
+                    </div>
+                    <div>
+                        <h5>Inspiratiebronnen</h5>
+                        <div class="inspo-flex">
+                        <img class="inspo" src="images/inspo4.png" alt="inspiratie SH de Roos">
+                        <img class="inspo" src="images/inspo5.png" alt="inspiratie SH de Roos">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="stijl-flex">
+                        <div>
+                            <h4>Versie 2</h4>
+                            <img class="menukaarten" src="images/menukaart2.png" alt="menukaart">
+                        </div>
+                        <div>
+                            <h5>Inspiratiebronnen</h5>
+                            <div class="inspo-flex">
+                            <img class="inspo" src="images/inspo2.png" alt="inspiratie SH de Roos">
+                            <img class="inspo" src="images/inspo6.png" alt="inspiratie SH de Roos">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stijl-flex">
+                    <div>
+                        <h4>Versie 3</h4>
+                        <img class="menukaarten" src="images/menukaart3.png" alt="menukaart">
+                    </div>
+                    <div>
+                        <h5>Inspiratiebronnen</h5>
+                        <div class="inspo-flex">
+                        <img class="inspo" src="images/inspo1.png" alt="inspiratie SH de Roos">
+                        <img class="inspo" src="images/inspo3.png" alt="inspiratie SH de Roos">
+                    </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
-
+        <!-- Reflectie -->
         <section id="reflectie">
-            <div class="centreren">
+
+            <div>
                 <h3>Reflectie</h3>
-                <p>
-                    Tijdens mijn stage heb ik ervaren hoe belangrijk het is om goede communicatie te hebben met de klant. 
-                    Ik had veel meer inspiratie wanneer ik zelf een gesprek had met de klant, dan wanneer ik indirect werd gebriefd door een collega. 
+                <p>Ik heb veel geleerd over vormgeving dit project. Typografie, visuele hiërarchie, vorm, kleur,
+                    compositie kwamen allemaal aan bod. De opdracht was erg vrij, er was veel ruimte om te
+                    experimenteren. Wat ik vooral meeneem is de kunst om snel veel verschillende versies te
+                    ontwerpen, in plaats van te blijven haken op één idee.
                 </p>
             </div>
-           
+            <img src="images/deco.svg" alt="decoratie">
         </section>
 
         <button id="back-to-top">Terug naar boven</button>
 
+
     </main>
     <script defer src="js/script.js"></script>
-    <script defer src="js/script-project5.js"></script>
+    <script defer src="js/script-project4.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 </body>
 
