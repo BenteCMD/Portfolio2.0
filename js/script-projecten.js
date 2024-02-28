@@ -18,7 +18,7 @@ const enableDarkMode = () => {
     
     menuProj.src="images/inclusive-dark.svg"
     fridgeProj.src="images/fridge-dark.png"
-    skateProj.src="images/skate-dark.png"
+    skateProj.src="images/webdesign-dark.svg"
     ccProj.src="images/cc-dark.png"
     xxxploreProj.src="images/xxxplore-dark.png"
 
@@ -30,7 +30,7 @@ const disableDarkMode = () => {
 
     menuProj.src="images/inclusive-cloud.svg"
     fridgeProj.src="images/fridge-cloud.png"
-    skateProj.src="images/skate-cloud.png"
+    skateProj.src="images/webdesign-cloud.svg"
     ccProj.src="images/cc-cloud.png"
     xxxploreProj.src="images/xxxplore-cloud.png"
 
