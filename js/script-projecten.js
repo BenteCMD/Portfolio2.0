@@ -11,7 +11,7 @@ var menuProj = document.querySelector("#menu")
 var fridgeProj = document.querySelector("#rmdd")
 var skateProj = document.querySelector("#skate")
 var ccProj = document.querySelector("#cc")
-var xxxploreProj = document.querySelector("#xxxplore")
+var datapawProj = document.querySelector("#datapaw")
   
 const enableDarkMode = () => {
     document.documentElement.classList.add("dark-mode")
@@ -20,7 +20,7 @@ const enableDarkMode = () => {
     fridgeProj.src="images/fridge-dark.png"
     skateProj.src="images/webdesign-dark.svg"
     ccProj.src="images/cc-dark.png"
-    xxxploreProj.src="images/xxxplore-dark.png"
+    datapawProj.src="images/Datapaw-cloud-dark.svg"
 
     localStorage.setItem('darkMode', 'enabled')
 }
@@ -32,7 +32,7 @@ const disableDarkMode = () => {
     fridgeProj.src="images/fridge-cloud.png"
     skateProj.src="images/webdesign-cloud.svg"
     ccProj.src="images/cc-cloud.png"
-    xxxploreProj.src="images/xxxplore-cloud.png"
+    datapawProj.src="images/Datapaw-cloud.svg"
 
     localStorage.setItem('darkMode', 'disabled')
 }
